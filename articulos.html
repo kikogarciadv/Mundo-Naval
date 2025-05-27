@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artículos - Mundo Naval</title>
   <style>
     body {
@@ -14,17 +15,49 @@
     }
     header {
       background-color: #001f3f;
-      color: #fff;
+      color: white;
       padding: 1.5rem;
       text-align: center;
+    }
+    nav {
+      background-color: #003366;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     main {
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    h1, h2, h3 {
+    article {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    h1, h2 {
       color: #001f3f;
+    }
+    a.button-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #001f3f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a.button-link:hover {
+      background-color: #003366;
     }
     footer {
       background-color: #eee;
@@ -33,49 +66,31 @@
       font-size: 0.9rem;
       color: #555;
     }
-    a.back-link {
-      display: inline-block;
-      margin-top: 2rem;
-      text-decoration: none;
-      color: #001f3f;
-    }
-    a.back-link:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Hélices de 5 palas: eficiencia y evolución</h1>
+    <h1>Artículos de Mundo Naval</h1>
   </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+  </nav>
   <main>
-    <h2>¿Por qué cada vez más barcos modernos usan hélices de 5 palas?</h2>
-    <p>Durante años se pensó que más palas equivalía a menos velocidad. Hoy vemos buques rápidos, eficientes y silenciosos con hélices de 5 palas como estándar.</p>
+    <article>
+      <h2>Hélices de 5 palas: eficiencia y evolución</h2>
+      <p>Descubre cómo las hélices modernas han ganado eficiencia y confort en navegación. Un repaso a su diseño y ventajas.</p>
+      <a href="helices.html" class="button-link">Leer más</a>
+    </article>
 
-    <h3>Ventajas principales:</h3>
-    <ul>
-      <li>➡️ Menos cavitación y vibración</li>
-      <li>➡️ Más empuje y mejor maniobrabilidad</li>
-      <li>➡️ Diseño optimizado con simulación y materiales modernos</li>
-      <li>➡️ Mayor confort y estabilidad incluso a altas velocidades</li>
-    </ul>
-
-    <h3>🔹 Cavitación y vibración reducidas</h3>
-    <p>Más palas distribuyen mejor el empuje, lo que suaviza el flujo del agua y evita burbujas de cavitación que causan ruido y desgaste.</p>
-
-    <h3>🔹 Empuje y control</h3>
-    <p>Mayor superficie en contacto con el agua permite mejor respuesta durante maniobras críticas como atraques o cambios de dirección.</p>
-
-    <h3>🔹 Diseño con CFD</h3>
-    <p>El uso de herramientas como la Dinámica de Fluidos Computacional (CFD) y materiales como bronce y composites permiten una hélice más precisa y ligera.</p>
-
-    <h3>🔹 El futuro</h3>
-    <p>Más palas se verán en submarinos, dragas o remolcadores. Sin embargo, lo que dominará será la propulsión variable, ductada o sistemas tipo Voith-Schneider.</p>
-
-    <a class="back-link" href="index.html">← Volver al inicio</a>
+    <article>
+      <h2>¿Reaccionará Europa a tiempo?</h2>
+      <p>El avance asiático en la construcción de cruceros desafía la hegemonía europea. ¿Está Europa preparada para competir?</p>
+      <a href="cruceros.html" class="button-link">Leer más</a>
+    </article>
   </main>
   <footer>
     <p>&copy; 2025 Mundo Naval. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
+
