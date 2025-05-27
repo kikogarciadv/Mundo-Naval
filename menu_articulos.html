@@ -2,95 +2,98 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artículos - Mundo Naval</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fdfdfd;
-      color: #222;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8fb;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      color: #333;
     }
     header {
       background-color: #001f3f;
       color: white;
-      padding: 1.5rem;
+      padding: 2rem 1rem;
       text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
     }
     nav {
       background-color: #003366;
-      padding: 0.5rem 0;
+      padding: 1rem;
       text-align: center;
     }
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 20px;
       font-weight: bold;
     }
     nav a:hover {
       text-decoration: underline;
     }
     main {
-      max-width: 800px;
+      max-width: 960px;
       margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    article {
-      background-color: #f4f4f4;
       padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
     }
-    h1, h2 {
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+    }
+    .card h2 {
+      margin-top: 0;
       color: #001f3f;
     }
-    a.button-link {
+    .card p {
+      color: #555;
+    }
+    .button-link {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
       background-color: #001f3f;
       color: white;
+      padding: 0.5rem 1rem;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 4px;
+      margin-top: 1rem;
     }
-    a.button-link:hover {
-      background-color: #003366;
-    }
-    footer {
-      background-color: #eee;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #555;
+    .button-link:hover {
+      background-color: #004080;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Artículos de Mundo Naval</h1>
+    <h1>Artículos del blog</h1>
   </header>
   <nav>
     <a href="index.html">Inicio</a>
+    <a href="menu_articulos.html">Artículos</a>
   </nav>
   <main>
-    <article>
-      <h2>Hélices de 5 palas: eficiencia y evolución</h2>
-      <p>Descubre cómo las hélices modernas han ganado eficiencia y confort en navegación. Un repaso a su diseño y ventajas.</p>
+    <div class="card">
+      <h2>¿Por qué los barcos modernos usan hélices de 5 palas?</h2>
+      <p>Descubre cómo las hélices modernas ofrecen eficiencia, menos vibración y mejor maniobrabilidad en la propulsión naval actual.</p>
       <a href="helices.html" class="button-link">Leer más</a>
-    </article>
+    </div>
 
-    <article>
-      <h2>¿Reaccionará Europa a tiempo?</h2>
-      <p>El avance asiático en la construcción de cruceros desafía la hegemonía europea. ¿Está Europa preparada para competir?</p>
+    <div class="card">
+      <h2>¿Reaccionará Europa a tiempo ante el auge asiático en la construcción de cruceros?</h2>
+      <p>Un análisis sobre cómo China está revolucionando el sector naval de cruceros, y el desafío que esto representa para los astilleros europeos.</p>
       <a href="cruceros.html" class="button-link">Leer más</a>
-    </article>
+    </div>
   </main>
-  <footer>
-    <p>&copy; 2025 Mundo Naval. Todos los derechos reservados.</p>
-  </footer>
 </body>
 </html>
 
