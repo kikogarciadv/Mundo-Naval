@@ -73,6 +73,12 @@
       background-color: #003366;
     }
   </style>
+  <script>
+    function mostrarArticulos() {
+      document.getElementById('articulos').style.display = 'block';
+      document.getElementById('btn-ver-articulos').style.display = 'none';
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -84,11 +90,11 @@
     <article>
       <h2>Sobre mí</h2>
       <p>Soy Francisco García de Vinuesa Prieto, un joven apasionado del mundo naval. Actualmente estoy finalizando mis estudios en Ingeniería Naval y quiero mostrarle al mundo la belleza e importancia de este ámbito fascinante. Este blog es mi forma de compartir conocimientos, curiosidades y avances del sector con todo aquel que ame el mar tanto como yo.</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/USS_Zumwalt_%28DDG-1000%29.jpg/800px-USS_Zumwalt_%28DDG-1000%29.jpg" alt="Buque naval moderno" class="header-image">
-      <a href="#articulos" class="button-link">Ver Artículos</a>
+      <img src="INICIO.jpg" alt="Buque naval moderno" class="header-image">
+      <a id="btn-ver-articulos" href="#" onclick="mostrarArticulos(); return false;" class="button-link">Ver Artículos</a>
     </article>
 
-    <article id="articulos">
+    <article id="articulos" style="display: none;">
       <h2>Artículos</h2>
       <section>
         <h3>Hélices</h3>
