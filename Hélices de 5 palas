@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Hélices de 5 palas - Mundo Naval</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #001f3f;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #003366;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1, h2, h3 {
+      color: #001f3f;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hélices de 5 palas: eficiencia y evolución</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="menu_articulos.html">Artículos</a>
+  </nav>
+  <main>
+    <h2>¿Por qué cada vez más barcos modernos usan hélices de 5 palas?</h2>
+    <p>Durante años se pensó que más palas equivalía a menos velocidad. Sin embargo, hoy vemos embarcaciones rápidas, eficientes y silenciosas con hélices de 5 palas como estándar.</p>
+
+    <h3>Ventajas clave</h3>
+    <ul>
+      <li>➡️ Menos cavitación y vibración</li>
+      <li>➡️ Más empuje y mejor maniobrabilidad</li>
+      <li>➡️ Diseño optimizado gracias a simulación y materiales modernos</li>
+      <li>➡️ Confort a bordo y rendimiento estable incluso a altas velocidades</li>
+    </ul>
+
+    <h3>🔹 Cavitación y vibración</h3>
+    <p>Al aumentar el número de palas, el empuje se distribuye mejor y el flujo de agua es más uniforme. Esto reduce la cavitación y las vibraciones transmitidas al casco, mejorando el confort y disminuyendo el desgaste.</p>
+
+    <h3>🔹 Más empuje y maniobrabilidad</h3>
+    <p>Las hélices de 5 palas ofrecen mayor superficie de empuje, lo que se traduce en mejor respuesta a bajas revoluciones y más control en maniobras delicadas.</p>
+
+    <h3>🔹 Diseño moderno y materiales</h3>
+    <p>Gracias a la CFD (Dinámica de Fluidos Computacional), se logran formas más eficientes. Además, los nuevos materiales como bronce de alto rendimiento y composites permiten ligereza sin perder resistencia.</p>
+
+    <h3>🔹 Confort y rendimiento estable</h3>
+    <p>El diseño de 5 palas ofrece una navegación más cómoda y silenciosa, y mantiene una buena eficiencia incluso a altas velocidades.</p>
+
+    <p><em>#IngenieríaNaval #PropulsiónMarina #Hélices #DiseñoNaval #InnovaciónTecnológica</em></p>
+  </main>
+  <footer>
+    <p>&copy; 2025 Mundo Naval. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
