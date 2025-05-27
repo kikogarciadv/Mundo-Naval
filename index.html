@@ -19,35 +19,27 @@
       padding: 1.5rem;
       text-align: center;
     }
+    nav {
+      background-color: #003366;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     main {
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    article {
-      margin-bottom: 2rem;
-    }
-    h1, h2, h3, h4 {
+    h1, h2 {
       color: #001f3f;
-    }
-    footer {
-      background-color: #eee;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #555;
-    }
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    nav a {
-      color: #001f3f;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      text-decoration: underline;
     }
     img.header-image {
       width: 100%;
@@ -60,17 +52,12 @@
       margin: 1rem auto;
       display: block;
     }
-    .button-link {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #001f3f;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .button-link:hover {
-      background-color: #003366;
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #555;
     }
   </style>
 </head>
@@ -79,17 +66,17 @@
     <img src="logo.png" alt="Logo Mundo Naval" class="logo">
     <h1>Mundo Naval</h1>
     <p>Apuntes, ideas y análisis sobre ingeniería naval</p>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="articulos.html">Artículos</a>
-    </nav>
   </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="menu_articulos.html">Artículos</a>
+  </nav>
   <main>
-    <article>
+    <section>
       <h2>Sobre mí</h2>
       <p>Soy Francisco García de Vinuesa Prieto, un joven apasionado del mundo naval. Actualmente estoy finalizando mis estudios en Ingeniería Naval y quiero mostrarle al mundo la belleza e importancia de este ámbito fascinante. Este blog es mi forma de compartir conocimientos, curiosidades y avances del sector con todo aquel que ame el mar tanto como yo.</p>
       <img src="INICIO.jpg" alt="Buque naval moderno" class="header-image">
-    </article>
+    </section>
   </main>
   <footer>
     <h3>Contacto</h3>
@@ -100,4 +87,5 @@
   </footer>
 </body>
 </html>
+
 
