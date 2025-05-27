@@ -27,13 +27,13 @@
     article {
       margin-bottom: 2rem;
     }
-    h1, h2 {
+    h1, h2, h3, h4 {
       color: #001f3f;
     }
     footer {
       background-color: #eee;
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #555;
     }
@@ -60,6 +60,18 @@
       margin: 1rem auto;
       display: block;
     }
+    .button-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #001f3f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .button-link:hover {
+      background-color: #003366;
+    }
   </style>
 </head>
 <body>
@@ -69,18 +81,17 @@
     <p>Apuntes, ideas y análisis sobre ingeniería naval</p>
   </header>
   <main>
-    <!-- contenido principal conservado -->
     <article>
       <h2>Sobre mí</h2>
       <p>Soy Francisco García de Vinuesa Prieto, un joven apasionado del mundo naval. Actualmente estoy finalizando mis estudios en Ingeniería Naval y quiero mostrarle al mundo la belleza e importancia de este ámbito fascinante. Este blog es mi forma de compartir conocimientos, curiosidades y avances del sector con todo aquel que ame el mar tanto como yo.</p>
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/USS_Zumwalt_%28DDG-1000%29.jpg/800px-USS_Zumwalt_%28DDG-1000%29.jpg" alt="Buque naval moderno" class="header-image">
+      <a href="#articulos" class="button-link">Ver Artículos</a>
     </article>
 
-    <article>
+    <article id="articulos">
       <h2>Artículos</h2>
       <section>
         <h3>Hélices</h3>
-        <!-- contenido de hélices conservado -->
         <article>
           <h4>¿Por qué cada vez más barcos modernos usan hélices de 5 palas?</h4>
           <p>Durante años se pensó que más palas equivalía a menos velocidad. Sin embargo, hoy vemos embarcaciones rápidas, eficientes y silenciosas con hélices de 5 palas como estándar.</p>
@@ -127,13 +138,11 @@
       </section>
     </article>
   </main>
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Apuntes</a>
-    <a href="#">Artículos</a>
-    <a href="#">Sobre mí</a>
-  </nav>
   <footer>
+    <h3>Contacto</h3>
+    <p>📧 Correo: <a href="mailto:kikogdv@gmail.com">kikogdv@gmail.com</a></p>
+    <p>📱 Teléfono: <a href="tel:+34644966512">+34 644 966 512</a></p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">Perfil profesional</a></p>
     <p>&copy; 2025 Mundo Naval. Todos los derechos reservados.</p>
   </footer>
 </body>
