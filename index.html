@@ -1,91 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
   <title>Mundo Naval</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fdfdfd;
-      color: #222;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8fb;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      color: #333;
     }
     header {
       background-color: #001f3f;
-      color: #fff;
-      padding: 1.5rem;
+      color: white;
+      padding: 1rem;
       text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
     nav {
       background-color: #003366;
-      padding: 0.5rem 0;
+      padding: 1rem;
       text-align: center;
     }
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
+      transition: color 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #ffcc00;
     }
     main {
-      max-width: 800px;
+      max-width: 960px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 1rem;
+      text-align: center;
     }
-    h1, h2 {
-      color: #001f3f;
+    .intro {
+      margin-bottom: 2rem;
     }
-    img.header-image {
-      width: 100%;
+    .intro img {
+      max-width: 100%;
       height: auto;
-      border-radius: 8px;
+      border-radius: 10px;
       margin-top: 1rem;
     }
-    img.logo {
-      width: 150px;
-      margin: 1rem auto;
-      display: block;
+    .cta-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #001f3f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .cta-button:hover {
+      background-color: #004080;
     }
     footer {
-      background-color: #eee;
+      background-color: #001f3f;
+      color: white;
       text-align: center;
       padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #555;
+    }
+    footer a {
+      color: #ffcc00;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo Mundo Naval" class="logo">
     <h1>Mundo Naval</h1>
-    <p>Apuntes, ideas y análisis sobre ingeniería naval</p>
   </header>
   <nav>
     <a href="index.html">Inicio</a>
     <a href="menu_articulos.html">Artículos</a>
+    <a href="#contacto">Contacto</a>
   </nav>
   <main>
-    <section>
-      <h2>Sobre mí</h2>
-      <p>Soy Francisco García de Vinuesa Prieto, un joven apasionado del mundo naval. Actualmente estoy finalizando mis estudios en Ingeniería Naval y quiero mostrarle al mundo la belleza e importancia de este ámbito fascinante. Este blog es mi forma de compartir conocimientos, curiosidades y avances del sector con todo aquel que ame el mar tanto como yo.</p>
-      <img src="INICIO.jpg" alt="Buque naval moderno" class="header-image">
+    <section class="intro">
+      <h2>Bienvenido a Mundo Naval</h2>
+      <p>
+        Soy Francisco García de Vinuesa Prieto, un joven apasionado del mundo naval que está terminando sus estudios de Ingeniería Naval.
+        Este blog es mi bitácora para compartir la belleza, evolución e importancia del diseño naval en el mundo actual.
+      </p>
+      <img src="INICIO.jpg" alt="Imagen naval representativa" />
+      <br />
+      <a href="menu_articulos.html" class="cta-button">Ver Artículos</a>
     </section>
   </main>
-  <footer>
-    <h3>Contacto</h3>
-    <p>📧 Correo: <a href="mailto:kikogdv@gmail.com">kikogdv@gmail.com</a></p>
-    <p>📱 Teléfono: <a href="tel:+34644966512">+34 644 966 512</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">Perfil profesional</a></p>
-    <p>&copy; 2025 Mundo Naval. Todos los derechos reservados.</p>
+  <footer id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: kikogdv@gmail.com</p>
+    <p>Teléfono: +34 644 966 512</p>
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">
+        francisco-garcia-de-vinuesa-prieto
+      </a>
+    </p>
   </footer>
 </body>
 </html>
+
 
 
