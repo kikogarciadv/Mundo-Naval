@@ -12,31 +12,29 @@
       padding: 0;
       color: #333;
     }
-    header {
+    header, footer, nav {
       background-color: #001f3f;
       color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    header {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
+      gap: 1rem;
     }
     header img {
       height: 50px;
-      margin-right: 15px;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
-    }
-    nav {
-      background-color: #003366;
-      padding: 1rem;
-      text-align: center;
+      font-size: 2rem;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 20px;
+      margin: 0 15px;
       font-weight: bold;
       transition: color 0.3s;
     }
@@ -46,29 +44,35 @@
     main {
       max-width: 960px;
       margin: 2rem auto;
-      padding: 1rem;
+      padding: 2rem;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      line-height: 1.6;
     }
     h2 {
+      text-align: center;
+      font-size: 2rem;
       color: #001f3f;
+      margin-bottom: 1.5rem;
     }
     h3 {
       color: #003366;
+      margin-top: 2rem;
     }
     img {
       max-width: 100%;
-      margin: 1rem 0;
       border-radius: 8px;
+      display: block;
+      margin: 1rem auto;
     }
     figcaption {
       font-style: italic;
       text-align: center;
       margin-bottom: 2rem;
     }
-    footer {
-      background-color: #001f3f;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
+    ul {
+      padding-left: 1.2rem;
     }
     footer a {
       color: #ffcc00;
@@ -81,13 +85,12 @@
     <h1>Mundo Naval</h1>
   </header>
 
-<nav>
-  <a href="index.html">Inicio</a>
-  <a href="menu_articulos.html">Artículos</a>
-  <a href="menu_yates.html">Yates</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="menu_articulos.html">Artículos</a>
+    <a href="menu_yates.html">Yates</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
   <main>
     <h2>¿Reaccionará Europa a tiempo ante el auge asiático en la construcción de cruceros?</h2>
@@ -102,7 +105,7 @@
     </p>
 
     <figure>
-      <img src="evolucion_construcción_naval.jpg" alt="Gráfico de países por capacidad de construcción naval">
+      <img src="evolucion_construccion_naval.jpg" alt="Gráfico de países por capacidad de construcción naval">
       <figcaption>Evolución de la construcción naval por países</figcaption>
     </figure>
 
