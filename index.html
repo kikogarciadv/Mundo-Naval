@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
   <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VS9GTH9DBR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-VS9GTH9DBR');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VS9GTH9DBR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VS9GTH9DBR');
+  </script>
 
   <meta charset="UTF-8" />
   <title>Mundo Naval</title>
@@ -24,12 +24,17 @@
     header {
       background-color: #001f3f;
       color: white;
-      padding: 1rem;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    header img {
+      height: 50px;
+      border-radius: 6px;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      margin-left: 1rem;
+      font-size: 2rem;
     }
     nav {
       background-color: #003366;
@@ -89,13 +94,14 @@
   <header>
     <img src="logo.png" alt="Logo Mundo Naval" />
     <h1>Mundo Naval</h1>
-</header>
+  </header>
+
   <nav>
-  <a href="index.html">Inicio</a>
-  <a href="menu_articulos.html">Artículos</a>
-  <a href="menu_yates.html">Yates</a>
-  <a href="#contacto">Contacto</a>
-</nav>
+    <a href="index.html">Inicio</a>
+    <a href="menu_articulos.html">Artículos</a>
+    <a href="menu_yates.html">Yates</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
   <main>
     <section class="intro">
@@ -109,6 +115,7 @@
       <a href="menu_articulos.html" class="cta-button">Ver Artículos</a>
     </section>
   </main>
+
   <footer id="contacto">
     <h2>Contacto</h2>
     <p>Email: kikogdv@gmail.com</p>
@@ -122,6 +129,5 @@
   </footer>
 </body>
 </html>
-
 
 
