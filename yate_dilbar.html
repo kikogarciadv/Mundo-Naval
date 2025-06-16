@@ -1,72 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Dilbar: Poder, Lujo y Controversia - Mundo Naval</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Yates - Mundo Naval</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f8fb; color: #333; }
-    header, footer, nav { background-color: #001f3f; color: white; padding: 1rem; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { color: #ffcc00; }
-    main { max-width: 960px; margin: 2rem auto; padding: 1rem; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h2, h3 { color: #001f3f; }
-    .carousel { display: flex; overflow-x: auto; gap: 1rem; padding: 1rem 0; }
-    .carousel img { height: 220px; border-radius: 8px; cursor: pointer; transition: transform 0.3s ease; }
-    .carousel img:hover { transform: scale(1.05); }
-    .gallery img { width: 100%; max-width: 800px; display: block; margin: 1rem auto; border-radius: 8px; }
-    footer a { color: #ffcc00; }
-    .section-header { display: flex; align-items: center; gap: 1rem; }
-    .section-header img { height: 60px; border-radius: 6px; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f2f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #001f3f;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background-color: #003366;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
+      transform: scale(1.1);
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .card {
+      background: linear-gradient(135deg, #ffffff, #f0f8ff);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: transform 0.4s, box-shadow 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,31,63,0.05);
+      transform: skewX(-20deg);
+      transition: left 0.5s;
+    }
+    .card:hover::before {
+      left: 100%;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #001f3f;
+    }
+    .card p {
+      color: #555;
+    }
+    .button-link {
+      display: inline-block;
+      background-color: #001f3f;
+      color: white;
+      padding: 0.5rem 1.2rem;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 1rem;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .button-link:hover {
+      background-color: #004080;
+      transform: scale(1.1);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer a {
+      color: #ffcc00;
+    }
   </style>
 </head>
 <body>
-  <header style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-    <img src="logo.png" alt="Logo Mundo Naval" style="height: 50px;">
-    <h1 style="margin: 0; font-size: 2rem;">Mundo Naval</h1>
+
+  <header>
+    <img src="logo.png" alt="Logo Mundo Naval" />
+    <h1>Artículos sobre Yates</h1>
   </header>
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="menu_articulos.html">Artículos</a>
     <a href="menu_yates.html">Yates</a>
     <a href="#contacto">Contacto</a>
   </nav>
+
   <main>
-    <h2>Dilbar: Poder, Lujo y Controversia en 156 Metros de Ingeniería Naval</h2>
-    <p>El <strong>Dilbar</strong> es mucho más que un yate. Es una obra maestra de la ingeniería naval y el diseño de lujo, símbolo de poder y exclusividad. Propiedad del multimillonario ruso-uzbeko Alisher Usmanov, el Dilbar ha sido calificado como uno de los yates más grandes y complejos jamás construidos.</p>
-    <div class="section-header">
-      <img src="bf313906-cc77-461b-86b8-bdac5dd8bb76.png" alt="Construcción y Diseño">
-      <h3>Construcción y Diseño</h3>
-    </div>
-    <div class="section-header">
-      <img src="d8548025-0af5-4e86-beee-29920c67f65f.png" alt="Diseño Exterior">
-      <h3>Diseño Exterior</h3>
-    </div>
-    <p>El diseño exterior del Dilbar fue realizado por Espen Øino International...</p>
-    <h3>Diseño Interior</h3>
-    <div class="carousel">
-      <img src="2312_8219a.jpg" alt="Interior 1" onclick="window.open(this.src)">
-      <img src="fd367a2a73cdbe88118e56304f673316.jpg" alt="Interior 2" onclick="window.open(this.src)">
-      <img src="134a29a1ce2e2ecce7b107b44f66e370.jpg" alt="Interior 3" onclick="window.open(this.src)">
-      <img src="Dilbar-interior-4.webp" alt="Interior 4" onclick="window.open(this.src)">
-      <img src="Dilbar-interior-3.webp" alt="Interior 5" onclick="window.open(this.src)">
-    </div>
-    <h3>Avistamientos del Dilbar</h3>
-    <ul>
-      <li>Porto Cervo, Sicilia</li>
-      <li>Valletta, Malta</li>
-      <li>Mónaco y Riviera Francesa</li>
-      <li>Barcelona (Puerto Port Vell) – amarre privado hasta 2036</li>
-    </ul>
-    <div style="text-align: center;">
-      <img src="c9536430-0457-438c-a96a-c1a2f77619d7.jpg" alt="Dilbar en Barcelona" style="width: 300px; border-radius: 8px;">
+    <div class="card" onclick="location.href='yate_dilbar.html'">
+      <img src="index_yates.png" alt="Imagen del Yate Dilbar">
+      <h2>Dilbar: Poder, Lujo y Controversia</h2>
+      <p>Descubre uno de los superyates más impresionantes del mundo. Ingeniería naval, diseño extremo y polémica internacional reunidos en 156 metros de eslora.</p>
+      <a href="yate_dilbar.html" class="button-link">Leer más</a>
     </div>
   </main>
+
   <footer id="contacto">
     <h2>Contacto</h2>
     <p>Email: kikogdv@gmail.com</p>
     <p>Teléfono: +34 644 966 512</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">francisco-garcia-de-vinuesa-prieto</a></p>
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">
+        francisco-garcia-de-vinuesa-prieto
+      </a>
+    </p>
   </footer>
 </body>
 </html>
