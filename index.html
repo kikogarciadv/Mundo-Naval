@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="icon" type="image/png" href="logo.png">
   <meta charset="UTF-8" />
   <title>Mundo Naval</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="logo.png" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -52,24 +52,23 @@
     }
     .banner {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 2rem;
+      margin-bottom: 2rem;
     }
     .banner img {
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 100%;
+      height: auto;
     }
-    .yates-link img {
-      width: 300px;
-      transition: transform 0.3s;
-    }
-    .yates-link img:hover {
-      transform: scale(1.05);
+    .yates-link img, .articulos-link img {
+      width: 250px;
     }
     .main-banner img {
       max-width: 100%;
-      width: 800px;
+      height: auto;
     }
     .cta-button {
       display: inline-block;
@@ -94,6 +93,12 @@
     footer a {
       color: #ffcc00;
     }
+    @media (max-width: 600px) {
+      .yates-link img, .articulos-link img {
+        width: 80% !important;
+        max-width: 300px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -111,23 +116,16 @@
 
   <main>
     <section class="banner">
-  <div style="display: flex; justify-content: center; gap: 2rem;">
-    <a href="menu_articulos.html" class="yates-link">
-      <img src="logo_articulos.png" alt="Artículos" style="width: 250px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-    </a>
-    <a href="menu_yates.html" class="yates-link">
-      <img src="index_yates.png" alt="Todo sobre yates" style="width: 250px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-    </a>
-  </div>
-</section>
-<div class="main-banner">
-  <img src="banner_mundo_naval.png" alt="Portada Mundo Naval" style="max-width: 100%; width: 600px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-</div>
-
-    $1
-
-
-
+      <a href="menu_articulos.html" class="articulos-link">
+        <img src="logo_articulos.png" alt="Artículos" />
+      </a>
+      <a href="menu_yates.html" class="yates-link">
+        <img src="index_yates.png" alt="Todo sobre yates" />
+      </a>
+    </section>
+    <div class="main-banner">
+      <img src="banner_mundo_naval.png" alt="Portada Mundo Naval" />
+    </div>
   </main>
 
   <footer id="contacto">
