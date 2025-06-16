@@ -38,9 +38,11 @@
       text-decoration: none;
       margin: 0 20px;
       font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #ffcc00;
+      transform: scale(1.1);
     }
     main {
       max-width: 960px;
@@ -50,13 +52,15 @@
     .card {
       background: white;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       padding: 1.5rem;
       margin-bottom: 2rem;
-      transition: transform 0.2s;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
     }
     .card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
     .card h2 {
       margin-top: 0;
@@ -73,9 +77,11 @@
       text-decoration: none;
       border-radius: 4px;
       margin-top: 1rem;
+      transition: background-color 0.3s, transform 0.3s;
     }
     .button-link:hover {
       background-color: #004080;
+      transform: scale(1.05);
     }
     footer {
       background-color: #001f3f;
@@ -94,7 +100,7 @@
     <h1>Artículos del blog</h1>
   </header>
 
-   <nav>
+  <nav>
     <a href="index.html">Inicio</a>
     <a href="menu_articulos.html">Artículos</a>
     <a href="menu_yates.html">Yates</a>
@@ -102,19 +108,19 @@
   </nav>
 
   <main>
-    <div class="card">
+    <div class="card" onclick="location.href='helices.html'">
       <h2>¿Por qué los barcos modernos usan hélices de 5 palas?</h2>
       <p>Descubre cómo las hélices modernas ofrecen eficiencia, menos vibración y mejor maniobrabilidad en la propulsión naval actual.</p>
       <a href="helices.html" class="button-link">Leer más</a>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="location.href='cfd.html'">
       <h2>¿CFD en Ingeniería Naval: el fin de las maquetas?</h2>
       <p>Explora cómo las simulaciones digitales están reemplazando las pruebas físicas, reduciendo costes y mejorando la precisión en el diseño de buques.</p>
       <a href="cfd.html" class="button-link">Leer más</a>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="location.href='cruceros.html'">
       <h2>¿Reaccionará Europa a tiempo ante el auge asiático en la construcción de cruceros?</h2>
       <p>Un análisis sobre cómo China está revolucionando el sector naval de cruceros, y el desafío que esto representa para los astilleros europeos.</p>
       <a href="cruceros.html" class="button-link">Leer más</a>
@@ -134,5 +140,3 @@
   </footer>
 </body>
 </html>
-
-
