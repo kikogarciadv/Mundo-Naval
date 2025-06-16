@@ -6,31 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f8fb; color: #333; }
+    header, footer, nav { background-color: #001f3f; color: white; padding: 1rem; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #ffcc00; }
     main { max-width: 960px; margin: 2rem auto; padding: 1rem; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    .image-box { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1rem; }
-    .image-box img { border-radius: 8px; }
+    h2, h3 { color: #001f3f; }
+    .carousel { display: flex; overflow-x: auto; gap: 1rem; padding: 1rem 0; }
+    .carousel img { height: 220px; border-radius: 8px; cursor: pointer; transition: transform 0.3s ease; }
+    .carousel img:hover { transform: scale(1.05); }
+    .gallery img { width: 100%; max-width: 800px; display: block; margin: 1rem auto; border-radius: 8px; }
+    footer a { color: #ffcc00; }
+    .section-header { display: flex; align-items: center; gap: 1rem; }
+    .section-header img { height: 60px; border-radius: 6px; }
   </style>
 </head>
 <body>
+  <header style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+    <img src="logo.png" alt="Logo Mundo Naval" style="height: 50px;">
+    <h1 style="margin: 0; font-size: 2rem;">Mundo Naval</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="menu_articulos.html">Artículos</a>
+    <a href="menu_yates.html">Yates</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
   <main>
     <h2>Dilbar: Poder, Lujo y Controversia en 156 Metros de Ingeniería Naval</h2>
     <p>El <strong>Dilbar</strong> es mucho más que un yate. Es una obra maestra de la ingeniería naval y el diseño de lujo, símbolo de poder y exclusividad. Propiedad del multimillonario ruso-uzbeko Alisher Usmanov, el Dilbar ha sido calificado como uno de los yates más grandes y complejos jamás construidos.</p>
-    
-    <div class="image-box">
-      <img src="bf313906-cc77-461b-86b8-bdac5dd8bb76.png" alt="Construcción y Diseño" style="width: 200px;">
-      <img src="d8548025-0af5-4e86-beee-29920c67f65f.png" alt="Diseño Exterior" style="width: 200px;">
+    <div class="section-header">
+      <img src="bf313906-cc77-461b-86b8-bdac5dd8bb76.png" alt="Construcción y Diseño">
+      <h3>Construcción y Diseño</h3>
     </div>
-
+    <div class="section-header">
+      <img src="d8548025-0af5-4e86-beee-29920c67f65f.png" alt="Diseño Exterior">
+      <h3>Diseño Exterior</h3>
+    </div>
     <p>El diseño exterior del Dilbar fue realizado por Espen Øino International...</p>
-
-    <div class="image-box">
-      <img src="2312_8219a.jpg" alt="Interior 1" style="width: 180px;">
-      <img src="fd367a2a73cdbe88118e56304f673316.jpg" alt="Interior 2" style="width: 180px;">
-      <img src="134a29a1ce2e2ecce7b107b44f66e370.jpg" alt="Interior 3" style="width: 180px;">
-      <img src="Dilbar-interior-4.webp" alt="Interior 4" style="width: 180px;">
-      <img src="Dilbar-interior-3.webp" alt="Interior 5" style="width: 180px;">
+    <h3>Diseño Interior</h3>
+    <div class="carousel">
+      <img src="2312_8219a.jpg" alt="Interior 1" onclick="window.open(this.src)">
+      <img src="fd367a2a73cdbe88118e56304f673316.jpg" alt="Interior 2" onclick="window.open(this.src)">
+      <img src="134a29a1ce2e2ecce7b107b44f66e370.jpg" alt="Interior 3" onclick="window.open(this.src)">
+      <img src="Dilbar-interior-4.webp" alt="Interior 4" onclick="window.open(this.src)">
+      <img src="Dilbar-interior-3.webp" alt="Interior 5" onclick="window.open(this.src)">
     </div>
-
     <h3>Avistamientos del Dilbar</h3>
     <ul>
       <li>Porto Cervo, Sicilia</li>
@@ -42,5 +62,11 @@
       <img src="c9536430-0457-438c-a96a-c1a2f77619d7.jpg" alt="Dilbar en Barcelona" style="width: 300px; border-radius: 8px;">
     </div>
   </main>
+  <footer id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: kikogdv@gmail.com</p>
+    <p>Teléfono: +34 644 966 512</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">francisco-garcia-de-vinuesa-prieto</a></p>
+  </footer>
 </body>
 </html>
