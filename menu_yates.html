@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f8fb;
+      background-color: #e6f2f8;
       margin: 0;
       padding: 0;
       color: #333;
@@ -19,6 +19,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
     header img {
       height: 50px;
@@ -32,31 +33,51 @@
       background-color: #003366;
       padding: 1rem;
       text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 20px;
       font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #ffcc00;
+      transform: scale(1.1);
     }
     main {
-      max-width: 960px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 1rem;
     }
     .card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 1.5rem;
+      background: linear-gradient(135deg, #ffffff, #f0f8ff);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
       margin-bottom: 2rem;
-      transition: transform 0.2s;
+      transition: transform 0.4s, box-shadow 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,31,63,0.05);
+      transform: skewX(-20deg);
+      transition: left 0.5s;
+    }
+    .card:hover::before {
+      left: 100%;
     }
     .card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
     }
     .card h2 {
       margin-top: 0;
@@ -69,13 +90,20 @@
       display: inline-block;
       background-color: #001f3f;
       color: white;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.2rem;
       text-decoration: none;
       border-radius: 4px;
       margin-top: 1rem;
+      transition: background-color 0.3s, transform 0.3s;
     }
     .button-link:hover {
       background-color: #004080;
+      transform: scale(1.1);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
     footer {
       background-color: #001f3f;
@@ -103,12 +131,12 @@
   </nav>
 
   <main>
-    <div class="card">
+    <div class="card" onclick="location.href='yate_dilbar.html'">
+      <img src="index_yates.png" alt="Imagen del Yate Dilbar">
       <h2>Dilbar: Poder, Lujo y Controversia</h2>
       <p>Descubre uno de los superyates más impresionantes del mundo. Ingeniería naval, diseño extremo y polémica internacional reunidos en 156 metros de eslora.</p>
       <a href="yate_dilbar.html" class="button-link">Leer más</a>
     </div>
-    <!-- Más artículos pueden añadirse aquí -->
   </main>
 
   <footer id="contacto">
