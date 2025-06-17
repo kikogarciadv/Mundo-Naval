@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Propulsión por Rotores Navales - Mundo Naval</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8fb;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #001f3f;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    header img {
+      height: 50px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      background-color: #003366;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      line-height: 1.6;
+    }
+    h2 {
+      text-align: center;
+      color: #001f3f;
+      margin-bottom: 1.5rem;
+    }
+    h3 {
+      color: #003366;
+      margin-top: 2rem;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin: 1rem auto;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+    .interactive {
+      background-color: #e6f2f8;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .highlight {
+      background: #ffcc00;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer a {
+      color: #ffcc00;
+    }
+    button {
+      background-color: #001f3f;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #004080;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo Mundo Naval">
+    <h1>Mundo Naval</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="menu_articulos.html">Artículos</a>
+    <a href="menu_yates.html">Yates</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+    <h2>🌬️ Propulsión por Rotores Navales (Efecto Magnus)</h2>
+
+    <p>Imagina un barco que navega sin velas ni grandes hélices, sino gracias a enormes cilindros giratorios que convierten el viento en <span class="highlight">energía de propulsión limpia</span>. Bienvenido al mundo del <strong>rotor Flettner</strong>.</p>
+
+    <div class="interactive">
+      <strong>¿Sabías que...?</strong> El efecto Magnus permite generar una fuerza perpendicular al viento mediante cilindros giratorios. ¡Haz clic en la imagen para verlo en acción!
+      <img src="efecto_magnus.png" alt="Diagrama del efecto Magnus" onclick="alert('El viento al chocar contra el cilindro giratorio crea una diferencia de presión que impulsa el barco. ¡Así de simple y potente!')">
+    </div>
+
+    <h3>⚙ Cómo funciona</h3>
+    <ul>
+      <li><strong>Rotores giratorios:</strong> Cilindros verticales giran en cubierta.</li>
+      <li><strong>Efecto Magnus:</strong> El giro + viento crean sustentación (fuerza perpendicular al viento).</li>
+      <li><strong>Propulsión:</strong> El barco avanza impulsado por esta fuerza.</li>
+      <li><strong>Control:</strong> Ajustando velocidad y ángulo de los rotores se controla el rumbo y empuje.</li>
+    </ul>
+
+    <img src="airbus_rotor_ship.png" alt="Barco con rotores en operación">
+
+    <h3>✅ Ventajas</h3>
+    <ul>
+      <li>Ahorro de combustible hasta un 30%.</li>
+      <li>Reducción de emisiones contaminantes.</li>
+      <li>Sistema de bajo mantenimiento y alta fiabilidad.</li>
+    </ul>
+
+    <h3>⚠ Desafíos</h3>
+    <ul>
+      <li>Dependencia de la dirección e intensidad del viento.</li>
+      <li>Alto coste inicial de instalación.</li>
+      <li>Espacio y peso extra en el diseño del barco.</li>
+    </ul>
+
+    <div class="interactive">
+      <strong>Simula:</strong> ¿Qué pasa si el viento cambia? 
+      <button onclick="alert('Si el viento cambia de dirección, el capitán ajusta el giro y orientación de los rotores para seguir generando empuje eficiente.')">¡Descúbrelo!</button>
+    </div>
+
+    <h3>🔍 Comparativa con velas rígidas</h3>
+    <ul>
+      <li>👉 Rotores: más fuerza por área, pero más voluminosos.</li>
+      <li>👉 Velas rígidas: mejores en ceñida, pero más complejas mecánicamente.</li>
+      <li>👉 Futuro: combinación de sistemas híbridos.</li>
+    </ul>
+
+    <h3>🚢 Ejemplos reales</h3>
+    <p>El <strong>E-Ship 1</strong> de Enercon y el <strong>Viking Grace</strong> han demostrado el potencial de esta tecnología.</p>
+
+    <p style="text-align: center; font-style: italic;">🌊 La navegación del futuro será un mar de innovación, y los rotores Flettner son solo el principio.</p>
+  </main>
+
+  <footer id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: kikogdv@gmail.com</p>
+    <p>Teléfono: +34 644 966 512</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">francisco-garcia-de-vinuesa-prieto</a></p>
+  </footer>
+</body>
+</html>
