@@ -12,57 +12,117 @@
     main { max-width: 960px; margin: 2rem auto; padding: 1rem; }
     h2, h3 { color: #001f3f; }
     .image-center { display: block; margin: 2rem auto; max-width: 100%; border-radius: 8px; }
-
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding: 1rem 0;
-      scroll-snap-type: x mandatory;
-      scroll-padding: 1rem;
-    }
-    .carousel img {
-      flex: 0 0 auto;
-      scroll-snap-align: start;
-      height: 220px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
+    .carousel { display: flex; overflow-x: auto; gap: 1rem; padding: 1rem 0; }
+    .carousel img { height: 220px; border-radius: 8px; cursor: pointer; transition: transform 0.3s ease; }
     .carousel img:hover { transform: scale(1.05); }
-
+    .gallery img { width: 100%; max-width: 800px; display: block; margin: 1rem auto; border-radius: 8px; }
     footer a { color: #ffcc00; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .section-header img {
+      height: 60px;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
   <header style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-    <img src="logo.png" alt="Logo Mundo Naval" style="height: 50px;">
-    <h1 style="margin: 0; font-size: 2rem;">Mundo Naval</h1>
-  </header>
-
+  <img src="logo.png" alt="Logo Mundo Naval" style="height: 50px;">
+  <h1 style="margin: 0; font-size: 2rem;">Mundo Naval</h1>
+</header>
   <nav>
     <a href="index.html">Inicio</a>
     <a href="menu_articulos.html">Artículos</a>
     <a href="menu_yates.html">Yates</a>
     <a href="#contacto">Contacto</a>
   </nav>
-
   <main style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 2.5rem; line-height: 1.6;">
     <h2 style="text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 1.5rem;">Dilbar: Poder, Lujo y Controversia en 156 Metros de Ingeniería Naval</h2>
+    <p>El <strong>Dilbar</strong> es mucho más que un yate. Es una obra maestra de la ingeniería naval y el diseño de lujo, símbolo de poder y exclusividad. Propiedad del multimillonario ruso-uzbeko Alisher Usmanov, el Dilbar ha sido calificado como uno de los yates más grandes y complejos jamás construidos.</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+  <h3 style="margin: 0;">Construcción y Diseño</h3>
+  <img src="bf313906-cc77-461b-86b8-bdac5dd8bb76.png" alt="Diseño y construcción del Dilbar" style="height: 270px; border-radius: 8px;">
+</div>
 
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;">
+  <div style="flex: 1;">
+    <h3 style="margin: 0;">Diseño Exterior</h3>
+    <p style="margin-top: 0;">
+      El diseño exterior del Dilbar fue realizado por Espen Øino International, un estudio de arquitectura naval reconocido por su enfoque elegante y funcional. La silueta del yate destaca por sus líneas modernas, proporciones equilibradas y detalles estilizados que le otorgan una presencia imponente en el agua.
+    </p>
+  </div>
+  <img src="d8548025-0af5-4e86-beee-29920c67f65f.png" alt="Diseño exterior del Dilbar" style="max-width: 200px; height: auto; border-radius: 8px;">
+</div>
+
+
+
+
+  
     <h3 style="margin-top: 2rem;">Diseño Interior</h3>
     <p>El interior del yate fue desarrollado por Winch Design, un estudio británico especializado en interiores de lujo. Utilizando materiales exclusivos, crearon espacios amplios y sofisticados pensados para el confort de los invitados, incluyendo zonas de relajación, entretenimiento y bienestar.</p>
-
-    <div class="carousel">
+    <div class="carousel" style="scroll-snap-type: x mandatory;">
       <img src="2312_8219a.jpg" alt="Interior 1" onclick="window.open(this.src)">
       <img src="fd367a2a73cdbe88118e56304f673316.jpg" alt="Interior 2" onclick="window.open(this.src)">
       <img src="134a29a1ce2e2ecce7b107b44f66e370.jpg" alt="Interior 3" onclick="window.open(this.src)">
-      <img src="Dilbar-interior-4.webp" alt="Interior 4" onclick="window.open(this.src)">
+      <img src="Dilbar-interior-4.webp" alt="Interior 4" style="scroll-snap-align: start;" onclick="window.open(this.src)">
       <img src="Dilbar-interior-3.webp" alt="Interior 5" onclick="window.open(this.src)">
     </div>
 
-  </main>
+    <h3>Ingeniería y Propulsión</h3>
+    <p>La construcción del yate fue llevada a cabo por el renombrado astillero alemán Lürssen, que entregó la embarcación en 2016. El Dilbar cuenta con un casco de acero y una superestructura de aluminio. Está propulsado por seis generadores diésel-eléctricos, que en conjunto generan 40.000 caballos de fuerza, permitiéndole alcanzar una velocidad máxima de 22,5 nudos y una velocidad de crucero de entre 16 y 18 nudos. Su autonomía estimada es de al menos 6.000 millas náuticas.</p>
 
+    <h3>Especificaciones Técnicas</h3>
+    <ul style="padding-left: 1.2rem;">
+      <li>Eslora: 156 metros</li>
+      <li>Manga: 23,5 metros</li>
+      <li>Calado: 6 metros</li>
+      <li>Desplazamiento: 15.917 toneladas</li>
+      <li>Valor estimado: 600 millones de euros</li>
+    </ul>
+
+    <h3>Capacidad y Comodidades</h3>
+    <ul>
+      <li>36 invitados en 20 camarotes</li>
+      <li>96 tripulantes</li>
+      <li>Piscina interior de 180 m³</li>
+      <li>Dos helipuertos</li>
+      <li>Spa, gimnasio, sauna, salón de belleza</li>
+      <li>Sala de masajes y entretenimiento de alta gama</li>
+    </ul>
+
+    <h3>El Dilbar en Números</h3>
+    <ul>
+      <li>Velocidad máxima: 22,5 nudos</li>
+      <li>Tripulación: 96 personas</li>
+      <li>Capacidad de invitados: 36 personas</li>
+      <li>Costo de operación anual: ~60 millones de dólares</li>
+      <li>Volumen interior: 15.917 GT</li>
+      <li>Premio: "Motor Yacht of the Year" en 2017</li>
+    </ul>
+
+    <h3>Propiedad y Controversia</h3>
+    <p>El yate pertenece oficialmente a Navis Marine Ltd. (Islas Caimán), pero se atribuye su propiedad final a Gulbahor Ismailova, hermana de Usmanov, a través de un fideicomiso. Fue incautado por autoridades alemanas en 2022 debido a sanciones por la invasión rusa a Ucrania. Usmanov calificó las sanciones como "injustas y difamatorias" y perdió la apelación.</p>
+
+    <h3>Avistamientos del Dilbar</h3>
+    <p>Ha sido fotografiado en:</p>
+    <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+      <li>Porto Cervo, Sicilia</li>
+      <li>Valletta, Malta</li>
+      <li>Mónaco y Riviera Francesa</li>
+      <li>Barcelona (Puerto Port Vell) – amarre privado hasta 2036</li>
+    </ul>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+  <img src="c9536430-0457-438c-a96a-c1a2f77619d7.jpg" alt="Dilbar en Barcelona" style="height: 90px; border-radius: 8px;">
+  <h3 style="margin: 0;">Dilbar en Barcelona</h3>
+</div>
+
+    <hr style="margin: 2rem 0;">
+    <h3 style="text-align: center;">Conclusión</h3>
+    <p>El superyate Dilbar no es solo un símbolo de lujo, sino también de poder, ingeniería y controversia. Su tamaño, diseño, tecnología y comodidades lo posicionan como una de las embarcaciones más impresionantes del planeta.</p>
+  </main>
   <footer id="contacto">
     <h2>Contacto</h2>
     <p>Email: kikogdv@gmail.com</p>
