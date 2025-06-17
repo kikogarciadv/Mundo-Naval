@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Construcción de Cruceros - Mundo Naval</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="icon" type="image/png" href="logo.png">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,7 +17,6 @@
       background-color: #001f3f;
       color: white;
       padding: 1rem;
-      text-align: center;
     }
     header {
       display: flex;
@@ -31,6 +30,9 @@
     header h1 {
       margin: 0;
       font-size: 2rem;
+    }
+    nav {
+      text-align: center;
     }
     nav a {
       color: white;
@@ -66,11 +68,15 @@
       border-radius: 8px;
       display: block;
       margin: 1rem auto;
+      transition: transform 0.3s;
+    }
+    img:hover {
+      transform: scale(1.05);
     }
     figcaption {
       font-style: italic;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
     ul {
       padding-left: 1.2rem;
@@ -81,12 +87,10 @@
   </style>
 </head>
 <body>
-  <header style="background-color: #001f3f; color: white; padding: 1rem; text-align: center;">
-  <div style="display: inline-flex; align-items: center; justify-content: center;">
-    <img src="logo.png" alt="Logo Mundo Naval" style="height: 50px; margin-right: 15px;">
-    <h1 style="margin: 0; font-size: 2.5rem;">Mundo Naval</h1>
-  </div>
-</header>
+  <header>
+    <img src="logo.png" alt="Logo Mundo Naval" />
+    <h1>Mundo Naval</h1>
+  </header>
 
   <nav>
     <a href="index.html">Inicio</a>
@@ -95,8 +99,8 @@
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <main style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 2.5rem; line-height: 1.6;">
-    <h2 style="text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 1.5rem;">¿Reaccionará Europa a tiempo ante el auge asiático en la construcción de cruceros?</h2>
+  <main>
+    <h2>¿Reaccionará Europa a tiempo ante el auge asiático en la construcción de cruceros?</h2>
 
     <p>
       Hace poco leí un artículo titulado <strong>"Los cruceros estrenan los nuevos gigantes del mar"</strong>. Al comenzar, una frase me llamó la atención: 
@@ -107,12 +111,12 @@
       Europa ha liderado tradicionalmente la construcción de cruceros, pero China y Corea del Sur se están incorporando con fuerza, como ya ocurrió con los buques mercantes en los años 80.
     </p>
 
-    <figure style="margin-top: 2rem;">
+    <figure>
       <img src="d2a20086-06a6-4266-9f20-e0df9a5fbd4c.png" alt="Gráfico de países por capacidad de construcción naval">
-      <figcaption style="font-style: italic; text-align: center; margin-top: 0.5rem;">Evolución de la construcción naval por países</figcaption>
+      <figcaption>Evolución de la construcción naval por países</figcaption>
     </figure>
 
-    <h3 style="margin-top: 2rem;">🇨🇳 "Made in China 2025" y el Adora Magic City</h3>
+    <h3>🇨🇳 "Made in China 2025" y el Adora Magic City</h3>
     <p>
       Este plan chino impulsa la innovación tecnológica nacional. Astilleros como Shanghai Waigaoqiao Shipbuilding (SWS) han logrado construir el <strong>Adora Magic City</strong>,
       un crucero de 323 metros de eslora y 6.600 pasajeros. Fue el primero construido íntegramente en China.
@@ -129,7 +133,7 @@
     </p>
 
     <h3>📊 Factores que impulsan su liderazgo:</h3>
-    <ul style="padding-left: 1.2rem;">
+    <ul>
       <li>Gran apoyo estatal e inversión estratégica</li>
       <li>Mano de obra más barata</li>
       <li>Gigantescos astilleros con producción en cadena</li>
@@ -138,10 +142,6 @@
       <li>Menor regulación ambiental</li>
       <li>Turnos de trabajo intensivos 24/7</li>
     </ul>
-
-    <p>
-      Europa todavía cuenta con experiencia, reputación y tecnología. Pero si los astilleros europeos no reaccionan, podrían ceder terreno frente a Asia en un sector clave.
-    </p>
 
     <p><strong>La pregunta es:</strong> ¿Reaccionará Europa a tiempo?</p>
   </main>
