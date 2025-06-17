@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+</body><!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -12,16 +13,22 @@
     main { max-width: 960px; margin: 2rem auto; padding: 1rem; }
     h2, h3 { color: #001f3f; }
     .image-center { display: block; margin: 2rem auto; max-width: 100%; border-radius: 8px; }
-    .carousel { display: flex; overflow-x: auto; gap: 1rem; padding: 1rem 0; }
-    .carousel img { height: 220px; border-radius: 8px; cursor: pointer; transition: transform 0.3s ease; }
-    .carousel img:hover { transform: scale(1.05); }
-    .gallery img { width: 100%; max-width: 800px; display: block; margin: 1rem auto; border-radius: 8px; }
-    footer a { color: #ffcc00; }
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
+   .carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 1rem;
+}
+.carousel img {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  height: 220px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
     .section-header img {
       height: 60px;
       border-radius: 6px;
@@ -129,5 +136,4 @@
     <p>Teléfono: +34 644 966 512</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">francisco-garcia-de-vinuesa-prieto</a></p>
   </footer>
-</body>
 </html>
