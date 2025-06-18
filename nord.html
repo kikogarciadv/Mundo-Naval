@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Yate NORD - Mundo Naval</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8fb;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #001f3f;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background-color: #003366;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h2, h3 {
+      color: #001f3f;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .design-exterior {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .design-exterior img {
+      width: 300px;
+      border-radius: 8px;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+      scroll-snap-type: x mandatory;
+    }
+    .carousel img {
+      height: 220px;
+      border-radius: 8px;
+      scroll-snap-align: start;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .carousel img:hover {
+      transform: scale(1.05);
+    }
+    .azipod {
+      text-align: center;
+    }
+    .azipod img {
+      width: 300px;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+    }
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo Mundo Naval">
+    <h1>Mundo Naval</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="menu_articulos.html">Artículos</a>
+    <a href="menu_yates.html">Yates</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+    <h2>Yate NORD: El gigante de Lürssen que redefine el lujo</h2>
+    
+    <section class="section">
+      <h3>Diseño y Construcción</h3>
+      
+      <div class="design-exterior">
+        <div>
+          <h4>Diseño Exterior</h4>
+          <p>El NORD destaca por una imponente y agresiva silueta, diseñada para combinar elegancia y poder. Sus líneas aerodinámicas no solo proyectan sofisticación sino que optimizan la navegación en largas travesías, gracias al talento de Nuvolari Lenard.</p>
+        </div>
+        <img src="diseño_exterior.png" alt="Diseño exterior NORD">
+      </div>
+
+      <div>
+        <h4>Diseño Interior</h4>
+        <p>El interior del NORD es un oasis flotante de lujo. Con ambientes que mezclan tonos cálidos, maderas nobles, mármoles y tecnología integrada, ofrece el máximo confort a bordo. Sus múltiples salones, suites y zonas recreativas garantizan privacidad y esplendor a partes iguales.</p>
+
+        <div class="carousel">
+          <img src="nord_1.webp" alt="Interior 1" onclick="window.open(this.src)">
+          <img src="nord_2.webp" alt="Interior 2" onclick="window.open(this.src)">
+          <img src="nord_3.webp" alt="Interior 3" onclick="window.open(this.src)">
+          <img src="nord_4.PNG" alt="Interior 4" onclick="window.open(this.src)">
+          <img src="nord_5.PNG" alt="Interior 5" onclick="window.open(this.src)">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Tecnología y Avances</h3>
+      <p>El NORD es un prodigio tecnológico. Equipado con sistemas avanzados de navegación, estabilizadores de última generación y un puente de mando con tecnología integrada, es capaz de realizar travesías transoceánicas con eficiencia y seguridad incomparables. Además, cuenta con helipuerto, garaje para tenders y vehículos de exploración.</p>
+
+      <div class="azipod">
+        <h4>Sistema de propulsión Azipod</h4>
+        <img src="Azipod.png" alt="Sistema Azipod">
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: kikogdv@gmail.com</p>
+    <p>Teléfono: +34 644 966 512</p>
+    <p>LinkedIn: 
+      <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">
+        francisco-garcia-de-vinuesa-prieto
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
