@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Yate NORD - Mundo Naval</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="logo.png" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,14 +20,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 1rem;
     }
     header img {
       height: 50px;
-      margin-right: 15px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
     }
     nav {
       background-color: #003366;
@@ -48,21 +44,10 @@
       max-width: 960px;
       margin: 2rem auto;
       padding: 1rem;
-    }
-    h2, h3 {
-      color: #001f3f;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    .design-exterior {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .design-exterior img {
-      width: 300px;
+      background: #fff;
       border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      line-height: 1.6;
     }
     .carousel {
       display: flex;
@@ -81,13 +66,10 @@
     .carousel img:hover {
       transform: scale(1.05);
     }
-    .azipod {
-      text-align: center;
-    }
-    .azipod img {
-      width: 300px;
-      border-radius: 8px;
-      margin-top: 0.5rem;
+    img.medium {
+      max-width: 400px;
+      display: block;
+      margin: 1rem auto;
     }
     footer {
       background-color: #001f3f;
@@ -99,13 +81,20 @@
     footer a {
       color: #ffcc00;
     }
+    .side-img {
+      float: right;
+      margin: 0 0 1rem 1rem;
+      max-width: 300px;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo Mundo Naval">
+    <img src="logo.png" alt="Logo Mundo Naval" />
     <h1>Mundo Naval</h1>
   </header>
+
   <nav>
     <a href="index.html">Inicio</a>
     <a href="menu_articulos.html">Artículos</a>
@@ -114,53 +103,42 @@
   </nav>
 
   <main>
-    <h2>Yate NORD: El gigante de Lürssen que redefine el lujo</h2>
-    
-    <section class="section">
-      <h3>Diseño y Construcción</h3>
-      
-      <div class="design-exterior">
-        <div>
-          <h4>Diseño Exterior</h4>
-          <p>El NORD destaca por una imponente y agresiva silueta, diseñada para combinar elegancia y poder. Sus líneas aerodinámicas no solo proyectan sofisticación sino que optimizan la navegación en largas travesías, gracias al talento de Nuvolari Lenard.</p>
-        </div>
-        <img src="diseño_exterior.png" alt="Diseño exterior NORD">
-      </div>
+    <h2>🚢 NORD: Ingeniería, poder y lujo sobre el mar</h2>
+    <p>El NORD, entregado en 2021 por el prestigioso astillero alemán Lürssen Yachts, es uno de los superyates más impactantes y sofisticados que surcan los océanos. Concebido bajo el nombre de proyecto Opus, su diseño y construcción tardaron varios años, combinando lo último en tecnología naval con un nivel de lujo y personalización que lo convierten en una obra maestra flotante.</p>
+    <p>Con una eslora de aproximadamente 142 metros y una manga de casi 19 metros, el NORD no es solo un símbolo de opulencia: es un escaparate de innovación y avance tecnológico aplicado al sector naval.</p>
 
-      <div>
-        <h4>Diseño Interior</h4>
-        <p>El interior del NORD es un oasis flotante de lujo. Con ambientes que mezclan tonos cálidos, maderas nobles, mármoles y tecnología integrada, ofrece el máximo confort a bordo. Sus múltiples salones, suites y zonas recreativas garantizan privacidad y esplendor a partes iguales.</p>
+    <h3>⚓ Diseño y construcción</h3>
+    <h4>Diseño exterior</h4>
+    <img src="diseño_exterior.png" alt="Diseño exterior NORD" class="side-img" />
+    <p>El NORD fue diseñado externamente por el famoso estudio italiano Nuvolari-Lenard, quienes lograron dotarlo de una personalidad única. Sus líneas marcadas, modernas y algo agresivas, transmiten fuerza y presencia en cualquier puerto o mar donde se aviste. A pesar de esa potencia visual, el diseño mantiene una elegancia intemporal gracias a la perfecta integración de cubiertas escalonadas, amplios ventanales y detalles que realzan la esbeltez del casco.</p>
+    <p>El casco está construido en acero de alta resistencia, pintado en un sofisticado gris azul oscuro, mientras que la superestructura, realizada en aluminio, contribuye a aligerar el peso total y optimizar la estabilidad. Entre sus detalles más notables, destacan los dos helipuertos y las generosas áreas abiertas con piscinas, jacuzzis y espacios para el relax.</p>
 
-        <div class="carousel">
-          <img src="nord_1.webp" alt="Interior 1" onclick="window.open(this.src)">
-          <img src="nord_2.webp" alt="Interior 2" onclick="window.open(this.src)">
-          <img src="nord_3.webp" alt="Interior 3" onclick="window.open(this.src)">
-          <img src="nord_4.PNG" alt="Interior 4" onclick="window.open(this.src)">
-          <img src="nord_5.PNG" alt="Interior 5" onclick="window.open(this.src)">
-        </div>
-      </div>
-    </section>
+    <h4>Diseño interior</h4>
+    <p>El interior del NORD es tan espectacular como su exterior. También obra de Nuvolari-Lenard, fusiona materiales nobles y tecnologías avanzadas con un gusto refinado por el detalle.</p>
+    <div class="carousel">
+      <img src="nord_1.webp" alt="Interior NORD 1" onclick="window.open(this.src)" />
+      <img src="nord_2.webp" alt="Interior NORD 2" onclick="window.open(this.src)" />
+      <img src="nord_3.webp" alt="Interior NORD 3" onclick="window.open(this.src)" />
+      <img src="nord_4.PNG" alt="Interior NORD 4" onclick="window.open(this.src)" />
+      <img src="nord_5.PNG" alt="Interior NORD 5" onclick="window.open(this.src)" />
+    </div>
+    <p>El yate puede alojar hasta 36 invitados en cerca de 20 camarotes, incluyendo suites VIP y un camarote principal que ofrece vistas panorámicas y privacidad absoluta.</p>
 
-    <section class="section">
-      <h3>Tecnología y Avances</h3>
-      <p>El NORD es un prodigio tecnológico. Equipado con sistemas avanzados de navegación, estabilizadores de última generación y un puente de mando con tecnología integrada, es capaz de realizar travesías transoceánicas con eficiencia y seguridad incomparables. Además, cuenta con helipuerto, garaje para tenders y vehículos de exploración.</p>
+    <h3>✨ Características destacadas</h3>
+    <p>El NORD se distingue por su capacidad de integrar elementos de confort, ocio y funcionalidad como ningún otro yate de su clase. Su concepto modular de cubiertas permite desde helipuertos operativos hasta pistas deportivas o zonas de eventos. Su iluminación convierte al NORD en un espectáculo nocturno cuando amarra en los puertos más exclusivos.</p>
 
-      <div class="azipod">
-        <h4>Sistema de propulsión Azipod</h4>
-        <img src="Azipod.png" alt="Sistema Azipod">
-      </div>
-    </section>
+    <h3>⚙ Tecnología y propulsión</h3>
+    <p>El NORD es un hito de ingeniería naval moderna. Combina motores diésel convencionales con tecnología híbrida, minimizando las vibraciones y el ruido a bordo. Este sistema híbrido permite un ahorro significativo de combustible, reduciendo el impacto ambiental.</p>
+    <img src="Azipod.png" alt="Sistema de propulsión Azipod" class="medium" />
+    <p style="text-align: center; font-weight: bold;">Sistema de propulsión Azipod</p>
+    <p>Entre sus avances destacan: sistema Azipod que permite maniobrabilidad excepcional, plataforma de control automatizado, sistemas de reducción de emisiones IMO Tier III, paneles de aislamiento acústico y red de fibra óptica interna. Dispone de sistema dinámico de posicionamiento que evita el anclaje en zonas ecológicas sensibles.</p>
   </main>
 
   <footer id="contacto">
     <h2>Contacto</h2>
     <p>Email: kikogdv@gmail.com</p>
     <p>Teléfono: +34 644 966 512</p>
-    <p>LinkedIn: 
-      <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">
-        francisco-garcia-de-vinuesa-prieto
-      </a>
-    </p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">francisco-garcia-de-vinuesa-prieto</a></p>
   </footer>
 </body>
 </html>
