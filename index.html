@@ -50,27 +50,18 @@
       padding: 1rem;
       text-align: center;
     }
-   .banner img {
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.banner a {
-  display: inline-block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.banner a:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-}
-
+    .banner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .banner img {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 100%;
+      height: auto;
     }
     .yates-link img, .articulos-link img {
       width: 250px;
@@ -150,3 +141,4 @@
   </footer>
 </body>
 </html>
+
