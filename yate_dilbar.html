@@ -2,197 +2,166 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Dilbar: Poder, Lujo y Controversia - Mundo Naval</title>
+  <title>Yate Dilbar - Mundo Naval</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1b2a;
-      color: #ffffff;
+      font-family: 'Georgia', serif;
+      background-color: #ffffff;
+      color: #222;
       line-height: 1.6;
     }
-    header {
-      background-color: #001f3f;
-      padding: 2rem;
+
+    header.hero {
+      position: relative;
+      height: 95vh;
+      background: url('dilbar_aerea.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      letter-spacing: 1px;
+
+    header.hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
     }
-    nav {
-      background-color: #031d44;
-      display: flex;
-      justify-content: center;
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 2rem;
-      padding: 1rem 0;
+      margin-top: 3rem;
     }
-    nav a {
-      color: #ffffffcc;
-      text-decoration: none;
-      font-weight: bold;
-      text-transform: uppercase;
-      transition: color 0.3s;
+
+    .feature {
+      padding: 1rem;
     }
-    nav a:hover {
-      color: #ffcc00;
+
+    .feature img {
+      width: 60px;
+      margin-bottom: 1rem;
     }
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 0 2rem;
+      margin-bottom: 4rem;
     }
-    h2, h3 {
-      color: #ffcc00;
-    }
-    .image-full {
+
+    .gallery img {
       width: 100%;
       border-radius: 10px;
-      margin: 2rem 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-    .flex-img-text {
-      display: flex;
-      gap: 2rem;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-    .flex-img-text img {
-      border-radius: 8px;
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-    }
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding: 1rem 0;
-      scroll-snap-type: x mandatory;
-      scroll-padding: 1rem;
-    }
-    .carousel img {
-      flex: 0 0 auto;
-      scroll-snap-align: start;
-      height: 220px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .carousel img:hover {
-      transform: scale(1.05);
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
+
     footer {
-      background-color: #001f3f;
-      text-align: center;
+      background: #001f3f;
+      color: white;
       padding: 2rem;
+      text-align: center;
     }
+
     footer a {
       color: #ffcc00;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Yate Dilbar</h1>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Yate Dilbar</h1>
+      <p>156 metros de lujo, potencia y controversia. Un icono flotante de la ingeniería naval moderna.</p>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="menu_articulos.html">Artículos</a>
-    <a href="menu_yates.html">Yates</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <section class="section">
+    <h2>Desde 2016, redefiniendo la navegación de lujo</h2>
+    <p>El superyate Dilbar combina ingeniería de precisión alemana con diseño interior británico exclusivo, y se posiciona como una de las embarcaciones más grandes y lujosas jamás construidas.</p>
+  </section>
 
-  <main>
-    <h2>Dilbar: Poder, Lujo y Controversia</h2>
-    <p>El <strong>Dilbar</strong> es mucho más que un yate. Es una obra maestra de la ingeniería naval y el diseño de lujo, símbolo de poder y exclusividad. Propiedad del multimillonario ruso-uzbeko Alisher Usmanov, el Dilbar ha sido calificado como uno de los yates más grandes y complejos jamás construidos.</p>
-
-    <div class="flex-img-text">
-      <div style="flex: 1;">
-        <h3>Construcción y Diseño</h3>
-        <p>Diseñado por Espen Øino International, el Dilbar combina elegancia y proporciones imponentes. Lürssen lo construyó en 2016 con casco de acero y superestructura de aluminio.</p>
+  <section class="section">
+    <div class="features">
+      <div class="feature">
+        <img src="icono-longitud.png" alt="Eslora">
+        <h3>156 m de eslora</h3>
+        <p>Uno de los yates privados más grandes del mundo por volumen interior.</p>
       </div>
-      <img src="bf313906-cc77-461b-86b8-bdac5dd8bb76.png" alt="Construcción Dilbar">
-    </div>
-
-    <div class="flex-img-text">
-      <div style="flex: 1;">
-        <h3>Diseño Exterior</h3>
-        <p>Su silueta destaca por sus líneas fluidas y modernas. Detalles estilizados le otorgan presencia inconfundible en marinas y puertos internacionales.</p>
+      <div class="feature">
+        <img src="icono-potencia.png" alt="Potencia">
+        <h3>40.000 HP</h3>
+        <p>Generadores eléctricos de última generación para potencia silenciosa.</p>
       </div>
-      <img src="d8548025-0af5-4e86-beee-29920c67f65f.png" alt="Exterior Dilbar">
+      <div class="feature">
+        <img src="icono-lujo.png" alt="Lujo">
+        <h3>Interior de 5 estrellas</h3>
+        <p>Diseño Winch Design, con spa, cine, piscina y espacios wellness.</p>
+      </div>
+      <div class="feature">
+        <img src="icono-heli.png" alt="Helipuertos">
+        <h3>2 Helipuertos</h3>
+        <p>Para operaciones privadas de alto nivel.</p>
+      </div>
     </div>
+  </section>
 
-    <h3>Diseño Interior</h3>
-    <p>Winch Design firma un interior de lujo con materiales exclusivos, zonas wellness, salones de entretenimiento, spa y espacios para huéspedes de alto perfil.</p>
-
-    <div class="carousel">
-      <img src="2312_8219a.jpg" alt="Interior 1" onclick="window.open(this.src)">
-      <img src="fd367a2a73cdbe88118e56304f673316.jpg" alt="Interior 2" onclick="window.open(this.src)">
-      <img src="134a29a1ce2e2ecce7b107b44f66e370.jpg" alt="Interior 3" onclick="window.open(this.src)">
-      <img src="Dilbar-interior-4.webp" alt="Interior 4" onclick="window.open(this.src)">
-      <img src="Dilbar-interior-3.webp" alt="Interior 5" onclick="window.open(this.src)">
+  <section class="section">
+    <h2>Galería del Yate Dilbar</h2>
+    <div class="gallery">
+      <img src="Dilbar-interior-3.webp" alt="Interior 1">
+      <img src="Dilbar-interior-4.webp" alt="Interior 2">
+      <img src="2312_8219a.jpg" alt="Interior 3">
+      <img src="fd367a2a73cdbe88118e56304f673316.jpg" alt="Interior 4">
     </div>
-
-    <h3>Propulsión</h3>
-    <p>6 generadores diésel-eléctricos con 40.000 HP permiten una velocidad máxima de 22,5 nudos. Su autonomía supera las 6.000 millas náuticas.</p>
-
-    <h3>Especificaciones Técnicas</h3>
-    <ul>
-      <li>Eslora: 156 metros</li>
-      <li>Manga: 23,5 metros</li>
-      <li>Calado: 6 metros</li>
-      <li>Desplazamiento: 15.917 toneladas</li>
-      <li>Velocidad crucero: 16-18 nudos</li>
-      <li>Valor estimado: 600 millones €</li>
-    </ul>
-
-    <h3>Comodidades</h3>
-    <ul>
-      <li>36 invitados en 20 camarotes</li>
-      <li>96 tripulantes</li>
-      <li>Piscina interior de 180 m³</li>
-      <li>2 helipuertos</li>
-      <li>Spa, gimnasio, salón de belleza, sauna</li>
-    </ul>
-
-    <h3>Premios y Costes</h3>
-    <ul>
-      <li>Premio: Motor Yacht of the Year 2017</li>
-      <li>Volumen interior: 15.917 GT</li>
-      <li>Coste anual de operación: ~60 millones USD</li>
-    </ul>
-
-    <h3>Controversia</h3>
-    <p>Incautado por Alemania en 2022 por sanciones a Usmanov. Propiedad nominal bajo Navis Marine Ltd. con vínculos familiares. Caso mediático y legal en curso.</p>
-
-    <h3>Últimos Puertos</h3>
-    <ul>
-      <li>Porto Cervo, Sicilia</li>
-      <li>Valletta, Malta</li>
-      <li>Mónaco</li>
-      <li>Barcelona – Puerto Port Vell</li>
-    </ul>
-
-    <img src="c9536430-0457-438c-a96a-c1a2f77619d7.jpg" alt="Dilbar en Barcelona" class="image-full">
-    <p style="text-align: center;">Dilbar en Barcelona, amarrado hasta 2036</p>
-
-    <h3 style="text-align: center;">Conclusión</h3>
-    <p style="text-align: center;">El Dilbar no es solo un yate, es un símbolo de supremacía naval, lujo desmedido y tensiones internacionales.</p>
-  </main>
+  </section>
 
   <footer id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: kikogdv@gmail.com</p>
-    <p>Teléfono: +34 644 966 512</p>
+    <h3>Contacto</h3>
+    <p>Email: kikogdv@gmail.com | Tel: +34 644 966 512</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">francisco-garcia-de-vinuesa-prieto</a></p>
   </footer>
 
 </body>
 </html>
+
