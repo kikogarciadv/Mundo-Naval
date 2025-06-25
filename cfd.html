@@ -1,238 +1,224 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>CFD en Ingeniería Naval - Mundo Naval</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explora cómo el CFD está revolucionando la ingeniería naval: simulaciones precisas, menor coste, y análisis avanzados sin necesidad de maquetas físicas.">
-  <meta name="keywords" content="CFD, ingeniería naval, simulaciones hidrodinámicas, diseño naval, MSC Meraviglia, análisis de flujo">
-  <meta name="author" content="Francisco García de Vinuesa Prieto" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f8fb;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
+      font-family: 'Segoe UI', sans-serif;
+      color: #222;
+      background-color: #fff;
+      line-height: 1.6;
+    }
 
-header {
-  background-color: #001f3f;
-  color: white;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    /* NAVBAR */
+    .main-nav {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(4px);
+      z-index: 10;
+    }
+    .nav-container {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+    .logo { font-size: 1.4rem; font-weight: bold; }
+    .nav-links a {
+      margin-left: 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: #ffcc00; }
 
-header img {
-  height: 50px;
-  margin-right: 15px;
-}
+    /* HERO */
+    header.hero {
+      position: relative;
+      height: 60vh;
+      background: url('cfd_hero.jpg') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    header.hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 1rem;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: .5rem;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
+    main {
+      max-width: 900px;
+      margin: -4rem auto 2rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 5;
+    }
+    h2, h3 { color: #001f3f; margin-top: 2rem; }
+    h2 img { height: 80px; vertical-align: middle; border-radius: 8px; margin-right: .75rem; }
+    ul { list-style: none; padding-left: 1rem; }
+    ul li::before { content: "✅ "; }
 
-nav {
-  background-color: #003366;
-  padding: 1rem;
-  text-align: center;
-}
+    img, video {
+      border-radius: 8px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      width: 100%;
+      height: auto;
+    }
+    .video-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .video-section div, .video-section video {
+      flex: 1 1 300px;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: bold;
-}
+    a.button {
+      display: inline-block;
+      background: #001f3f;
+      color: white;
+      padding: .6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 1.5rem;
+      transition: background 0.3s;
+    }
+    a.button:hover { background: #004080; }
 
-nav a:hover {
-  color: #ffcc00;
-}
+    footer {
+      background: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer a { color: #ffcc00; text-decoration: none; }
 
-main {
-  max-width: 960px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
-
-h2 {
-  color: #001f3f;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-h2 img {
-  height: 80px;
-  border-radius: 8px;
-}
-
-h3 {
-  margin-top: 2rem;
-  color: #003366;
-  border-bottom: 2px solid #003366;
-  padding-bottom: 0.3rem;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li::before {
-  content: "✅ ";
-  margin-right: 0.5rem;
-}
-
-img, video {
-  border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-}
-
-.video-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 20px;
-  margin: 2rem 0;
-}
-
-p a {
-  display: inline-block;
-  background: #001f3f;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-top: 1rem;
-}
-
-p a:hover {
-  background: #004080;
-}
-
-footer {
-  background-color: #001f3f;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-footer a {
-  color: #ffcc00;
-}
-
-
+    @media (max-width:768px){
+      .nav-links { display: none; }
+      header.hero { height: 50vh; }
+      .hero-content h1 { font-size:2rem; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo Mundo Naval" />
-    <h1>Mundo Naval</h1>
-  </header>
 
- <nav>
-  <a href="index.html">Inicio</a>
-  <a href="menu_articulos.html">Artículos</a>
-  <a href="menu_yates.html">Yates</a>
-  <a href="#contacto">Contacto</a>
+<nav class="main-nav">
+  <div class="nav-container">
+    <div class="logo">Mundo Naval</div>
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="menu_articulos.html">Artículos</a>
+      <a href="menu_yates.html">Yates</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
 </nav>
 
-
-  <main>
-
-    <p>
-      Durante décadas, la validación del diseño hidrodinámico de buques ha dependido de canales de ensayos y maquetas físicas a escala. Sin embargo, la evolución de la Dinámica de Fluidos Computacional (CFD, por sus siglas en inglés) ha transformado profundamente la forma en que se abordan estos estudios. Hoy, la simulación digital ya no es un complemento, sino una herramienta principal y, en muchos casos, superior.
-    </p>
-
-    <h3>¿Qué es CFD?</h3>
-    <p>
-      El CFD es una rama de la mecánica de fluidos que utiliza métodos numéricos y algoritmos para resolver las ecuaciones de Navier-Stokes, modelando así el comportamiento de fluidos alrededor de estructuras complejas, como los cascos de los buques. No se trata solo de visualizar flujos: es ingeniería numérica aplicada, con capacidad predictiva y de optimización.
-    </p>
-    <div style="display: flex; flex-direction: column; align-items: center; margin: 2rem 0;">
-  <img src="08516645-10cd-4d75-b5d1-0d3f43b9ef55.png" alt="Visualización CFD en buque" style="max-width: 100%; height: auto; width: 600px; border-radius: 10px;" />
-  <p style="max-width: 800px; text-align: center; margin-top: 1rem;">
-    La imagen muestra una simulación CFD aplicada a un buque. El mapa de colores representa la velocidad del flujo del agua (en metros por segundo) alrededor del casco:
-    <br><br>
-    <strong>🔵 Azul oscuro:</strong> flujo casi detenido<br>
-    <strong>🟢 Verde:</strong> flujo medio<br>
-    <strong>🟠 Naranja:</strong> velocidades altas<br>
-    <strong>🔴 Rojo intenso:</strong> zonas de máxima velocidad (hasta ~6 m/s)<br><br>
-    Este gradiente permite identificar zonas de cavitación, estela y separación de flujo, esenciales para mejorar el diseño hidrodinámico.
-  </p>
-</div>
-
-
-    <h3>Ventajas del CFD frente a maquetas físicas</h3>
-    <ul>
-      <li>Escala real y sin distorsión</li>
-      <li>Reducción de costes y tiempo</li>
-      <li>Iteraciones ágiles</li>
-      <li>Condiciones extremas simulables</li>
-      <li>Reproducibilidad</li>
-    </ul>
-
-    <h3>Caso real: MSC Meraviglia</h3>
-    <p>
-      En el diseño del crucero MSC Meraviglia, uno de los más grandes del mundo, se usaron herramientas CFD para predecir la resistencia al avance y el comportamiento hidrodinámico. Los resultados obtenidos por simulación digital coincidieron con los del canal de ensayos, validando plenamente el modelo numérico.
-    </p>
-    <p>
-      Una de las métricas clave fue la magnitud de velocidad en el entorno del casco, que permitió detectar zonas críticas como estelas, cavitación y separación de flujo, información vital para el diseño de hélices, timones y estabilidad direccional.
-    </p>
-
-    <div class="video-section">
-  <div style="flex: 1;">
-    <h3>Tipos de análisis hidrodinámicos avanzados mediante CFD</h3>
-    <p>La simulación CFD no solo permite evaluar la resistencia al avance de un buque, sino que abre la puerta a una gama de análisis complejos que, tradicionalmente, requerían costosas pruebas físicas:</p>
-    <ol>
-      <li><strong>Porpoising:</strong> oscilación vertical en alta velocidad</li>
-      <li><strong>Aceleración:</strong> respuesta ante aumentos de potencia</li>
-      <li><strong>Presión dinámica:</strong> distribución de presión y líneas de corriente</li>
-      <li><strong>Balanceo (Roll):</strong> comportamiento lateral del buque</li>
-      <li><strong>Olas de proa:</strong> interacción casco-oleaje frontal</li>
-      <li><strong>Giro (Turning):</strong> comportamiento en maniobras</li>
-    </ol>
+<header class="hero">
+  <div class="hero-content" data-aos="fade-down">
+    <h1>CFD en Ingeniería Naval</h1>
+    <p>Simulación avanzada que revoluciona el diseño de buques sin maquetas físicas.</p>
   </div>
-  <video autoplay loop muted style="flex: 0 0 600px; max-width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);">
-    <source src="cfd-simulacion.mp4" type="video/mp4" />
-    Tu navegador no soporta el video HTML5.
-  </video>
-</div>
+</header>
 
+<main data-aos="fade-up">
+  <h2><img src="logo.png" alt="Logo">CFD: Simulación Digital Precisa</h2>
+  <p>Durante décadas, la validación del diseño hidrodinámico dependía de túneles de ensayo y maquetas físicas. Hoy, el CFD es la herramienta principal y muchas veces, la más precisa.</p>
 
-    <h3>Conclusión</h3>
-    <p>
-      Gracias al CFD, los ingenieros navales ahora pueden anticipar y optimizar con gran precisión el rendimiento del buque en diversas condiciones reales —y extremas— sin necesidad de construir prototipos físicos. Esta capacidad no solo mejora la seguridad y la eficiencia, sino que también reduce significativamente los costes de desarrollo.
-    </p>
-    <p>
-      🔄 En vez de construir primero para validar después, ahora diseñamos, optimizamos y validamos virtualmente… y solo entonces se construye.
-    </p>
-    <p>
-      El canal de ensayos sigue siendo valioso como herramienta de validación final, pero el CFD ha llegado para liderar el proceso desde las primeras fases de diseño. Es el nuevo estándar de la innovación naval.
-    </p>
+  <h3>¿Qué es CFD?</h3>
+  <p>El CFD resuelve las ecuaciones de Navier‑Stokes para entender el comportamiento del agua alrededor de un casco —no solo visualmente, sino con análisis numérico predictivo.</p>
 
-    <p><em>#IngenieríaNaval #SimulaciónCFD #DiseñoDeBuques #TecnologíaNaval</em></p>
-    <p><a href="menu_articulos.html">← Volver a artículos</a></p>
-  </main>
-
-  <footer id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: kikogdv@gmail.com</p>
-    <p>Teléfono: +34 644 966 512</p>
-    <p>
-      LinkedIn:
-      <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">
-        francisco-garcia-de-vinuesa-prieto
-      </a>
+  <div data-aos="fade-up">
+    <img src="08516645-10cd-4d75-b5d1-0d3f43b9ef55.png" alt="Simulación CFD">
+    <p style="text-align:center; margin-top:1rem;">
+      El mapa presenta: 🔵 flujo lento / 🟢 medio / 🟠 alto / 🔴 máximo (~6 m/s). Así detectamos cavitación, separación de flujo y optimizamos el diseño.
     </p>
-  </footer>
+  </div>
+
+  <h3>Ventajas del CFD frente a maquetas físicas</h3>
+  <ul data-aos="fade-up">
+    <li>Escala real sin distorsión</li>
+    <li>Menor coste y tiempo</li>
+    <li>Iteraciones ágiles</li>
+    <li>Simulación en condiciones extremas</li>
+    <li>Alta reproducibilidad</li>
+  </ul>
+
+  <h3>Caso real: MSC Meraviglia</h3>
+  <p data-aos="fade-up">Durante el diseño del crucero MSC Meraviglia, el CFD confirmó los resultados de los ensayos físicos, validando completamente el modelo numérico.</p>
+
+  <div class="video-section" data-aos="fade-up">
+    <div>
+      <h3>Ejemplos de análisis CFD avanzados</h3>
+      <ol>
+        <li>Porpoising (oscilación vertical) </li>
+        <li>Aceleración</li>
+        <li>Presión dinámica y corrientes</li>
+        <li>Balanceo (Roll)</li>
+        <li>Olas de proa</li>
+        <li>Maniobras (Turning)</li>
+      </ol>
+    </div>
+    <video autoplay loop muted>
+      <source src="cfd-simulacion.mp4" type="video/mp4">
+      Tu navegador no soporta HTML5 video.
+    </video>
+  </div>
+
+  <h3>Conclusión</h3>
+  <p>El CFD permite diseñar, optimizar y validar digitalmente antes de construir. El túnel de ensayo sigue siendo útil, pero el CFD ya lidera el proceso de innovación naval.</p>
+
+  <p><em>#IngenieríaNaval #CFD #Simulación</em></p>
+  <a href="menu_articulos.html" class="button">← Volver a artículos</a>
+</main>
+
+<footer id="contacto">
+  <h2>Contacto</h2>
+  <p>Email: kikogdv@gmail.com | Tel: +34 644 966 512</p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">francisco‑garcía‑de‑vinuesa‑prieto</a></p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+
 </body>
 </html>
