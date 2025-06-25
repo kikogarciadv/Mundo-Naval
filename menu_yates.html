@@ -6,111 +6,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #e6f2f8;
       margin: 0;
-      padding: 0;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1b2a;
+      color: white;
     }
     header {
       background-color: #001f3f;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    header img {
-      height: 50px;
-      margin-right: 15px;
+      padding: 2rem;
+      text-align: center;
     }
     header h1 {
-      margin: 0;
       font-size: 2.5rem;
+      margin: 0;
+      letter-spacing: 2px;
     }
     nav {
-      background-color: #003366;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      background-color: #031d44;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
     }
     nav a {
-      color: white;
+      color: #ffffffcc;
       text-decoration: none;
-      margin: 0 20px;
       font-weight: bold;
-      transition: color 0.3s, transform 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s;
     }
     nav a:hover {
       color: #ffcc00;
-      transform: scale(1.1);
     }
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    .card {
-      background: linear-gradient(135deg, #ffffff, #f0f8ff);
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
       padding: 2rem;
-      margin-bottom: 2rem;
-      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .project {
       position: relative;
       overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
     }
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
+
+    .project img {
       width: 100%;
       height: 100%;
-      background: rgba(0,31,63,0.05);
-      transform: skewX(-20deg);
-      transition: left 0.5s;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
     }
-    .card:hover::before {
-      left: 100%;
-    }
-    .card:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-    }
-    .card h2 {
-      margin-top: 0;
-      color: #001f3f;
-    }
-    .card p {
-      color: #555;
-    }
-    .button-link {
-      display: inline-block;
-      background-color: #001f3f;
-      color: white;
-      padding: 0.5rem 1.2rem;
-      text-decoration: none;
-      border-radius: 4px;
-      margin-top: 1rem;
-      transition: background-color 0.3s, transform 0.3s;
-    }
-    .button-link:hover {
-      background-color: #004080;
+
+    .project:hover img {
       transform: scale(1.1);
     }
-    .card img {
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
       width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+      padding: 1rem;
+      box-sizing: border-box;
+      transition: 0.3s ease;
     }
+
+    .overlay h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #fff;
+    }
+
+    .overlay p {
+      margin: 0.5rem 0 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
     footer {
       background-color: #001f3f;
-      color: white;
+      color: #fff;
       text-align: center;
       padding: 2rem 1rem;
     }
+
     footer a {
       color: #ffcc00;
     }
@@ -119,8 +103,7 @@
 <body>
 
   <header>
-    <img src="logo.png" alt="Logo Mundo Naval" />
-    <h1>Artículos sobre Yates</h1>
+    <h1>Yates de Lujo</h1>
   </header>
 
   <nav>
@@ -130,21 +113,31 @@
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <main>
-    <div class="card" onclick="location.href='yate_dilbar.html'">
-      <img src="index_yates.png" alt="Imagen del Yate Dilbar">
-      <h2>Dilbar: Poder, Lujo y Controversia</h2>
-      <p>Descubre uno de los superyates más impresionantes del mundo. Ingeniería naval, diseño extremo y polémica internacional reunidos en 156 metros de eslora.</p>
-      <a href="yate_dilbar.html" class="button-link">Leer más</a>
-    </div>
-    <div class="card" onclick="location.href='nord.html'">
-  <img src="nord_portada.png" alt="Portada Yate NORD" style="width: 100%; max-width: 400px; border-radius: 8px; display: block; margin: 0 auto;">
-  <h2>Yate NORD: El gigante de Lürssen</h2>
-  <p>Explora el diseño, tecnología y lujo del NORD, una obra maestra naval construida por Lürssen.</p>
-  <a href="nord.html" class="button-link" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #001f3f; color: white; text-decoration: none; border-radius: 4px;">Leer más</a>
+  <section class="grid">
+    <div class="project" onclick="location.href='yate_dilbar.html'">
+      <img src="index_yates.png" alt="Dilbar">
+      <div class="overlay">
+        <h2>Dilbar</h2>
+        <p>Poder, Lujo y Controversia</p>
+      </div>
     </div>
 
-  </main>
+    <div class="project" onclick="location.href='nord.html'">
+      <img src="nord_portada.png" alt="NORD">
+      <div class="overlay">
+        <h2>NORD</h2>
+        <p>Gigante naval de Lürssen</p>
+      </div>
+    </div>
+
+    <div class="project" onclick="location.href='eclipse.html'">
+      <img src="eclipse.png" alt="Eclipse">
+      <div class="overlay">
+        <h2>Eclipse</h2>
+        <p>Yate de Roman Abramovich</p>
+      </div>
+    </div>
+  </section>
 
   <footer id="contacto">
     <h2>Contacto</h2>
@@ -157,5 +150,6 @@
       </a>
     </p>
   </footer>
+
 </body>
 </html>
