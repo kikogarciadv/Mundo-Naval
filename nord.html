@@ -1,160 +1,208 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Yate NORD - Mundo Naval</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="logo.png" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f8fb;
-      margin: 0;
-      padding: 0;
-      color: #333;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Georgia', serif; background-color: #fff; color: #222; line-height: 1.6; }
+
+    .main-nav {
+      position: absolute;
+      top: 0; left: 0; right: 0; z-index: 10;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
     }
-    header {
-      background-color: #001f3f;
+
+    .nav-container {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       color: white;
-      padding: 1rem;
+    }
+
+    .logo { font-size: 1.4rem; font-weight: bold; letter-spacing: 1px; }
+
+    .nav-links a {
+      margin-left: 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: #ffcc00; }
+
+    header.hero {
+      position: relative;
+      height: 100vh;
+      background: url('nord_hero.jpg') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
+      text-align: center;
+      color: white;
     }
-    header img {
-      height: 50px;
+
+    header.hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
     }
-    nav {
-      background-color: #003366;
-      padding: 1rem;
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 2rem;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 4rem 2rem;
       text-align: center;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffcc00;
-    }
-    main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      line-height: 1.6;
-    }
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding: 1rem 0;
-      scroll-snap-type: x mandatory;
-    }
-    .carousel img {
-      height: 220px;
-      border-radius: 8px;
-      scroll-snap-align: start;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .carousel img:hover {
-      transform: scale(1.05);
-    }
-    img.medium {
-      max-width: 400px;
-      display: block;
-      margin: 1rem auto;
-    }
-    footer {
-      background-color: #001f3f;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
+
+    .section h2 { font-size: 2rem; color: #001f3f; margin-bottom: 1rem; }
+
+    .section p { max-width: 800px; margin: 0 auto; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
       margin-top: 3rem;
     }
-    footer a {
-      color: #ffcc00;
+
+    .feature { padding: 1rem; }
+
+    .feature img {
+      width: 60px;
+      margin-bottom: 1rem;
     }
-    .side-img {
-      float: right;
-      margin: 0 0 1rem 1rem;
-      max-width: 300px;
-      border-radius: 8px;
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 0 2rem;
+      margin-top: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #001f3f;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer a { color: #ffcc00; }
+
+    @media (max-width: 768px) {
+      .hero-content h1 { font-size: 2rem; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo Mundo Naval" />
-    <h1>Mundo Naval</h1>
-  </header>
 
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="menu_articulos.html">Artículos</a>
-    <a href="menu_yates.html">Yates</a>
-    <a href="#contacto">Contacto</a>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="logo">Mundo Naval</div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="menu_articulos.html">Artículos</a>
+        <a href="menu_yates.html">Yates</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <h2>🚢 NORD: Ingeniería, poder y lujo sobre el mar</h2>
-    <p>El NORD, entregado en 2021 por el prestigioso astillero alemán Lürssen Yachts, es uno de los superyates más impactantes y sofisticados que surcan los océanos. Concebido bajo el nombre de proyecto Opus, su diseño y construcción tardaron varios años, combinando lo último en tecnología naval con un nivel de lujo y personalización que lo convierten en una obra maestra flotante.</p>
-    <p>Con una eslora de aproximadamente 142 metros y una manga de casi 19 metros, el NORD no es solo un símbolo de opulencia: es un escaparate de innovación y avance tecnológico aplicado al sector naval.</p>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Yate NORD</h1>
+      <p>142 metros de estilo agresivo, tecnología militar y diseño de alto impacto visual. Fabricado por Lürssen, redefiniendo la presencia en alta mar.</p>
+    </div>
+  </header>
 
-    <h3>⚓ Diseño y construcción</h3>
-    <h4>Diseño exterior</h4>
-    <img src="diseño_exterior.png" alt="Diseño exterior NORD" class="side-img" />
-    <p>El NORD fue diseñado externamente por el famoso estudio italiano Nuvolari-Lenard, quienes lograron dotarlo de una personalidad única. Sus líneas marcadas, modernas y algo agresivas, transmiten fuerza y presencia en cualquier puerto o mar donde se aviste. A pesar de esa potencia visual, el diseño mantiene una elegancia intemporal gracias a la perfecta integración de cubiertas escalonadas, amplios ventanales y detalles que realzan la esbeltez del casco.</p>
-    <p>El casco está construido en acero de alta resistencia, pintado en un sofisticado gris azul oscuro, mientras que la superestructura, realizada en aluminio, contribuye a aligerar el peso total y optimizar la estabilidad. Entre sus detalles más notables, destacan los dos helipuertos y las generosas áreas abiertas con piscinas, jacuzzis y espacios para el relax.</p>
+  <section class="section" data-aos="fade-up">
+    <h2>Diseño imponente, alma tecnológica</h2>
+    <p>El NORD es una embarcación que combina líneas angulares, un casco azul oscuro, y silueta aerodinámica. A bordo, se mezclan arte, seguridad y arquitectura naval de vanguardia.</p>
+  </section>
 
-    <h4 style="margin-top: 3rem;">Diseño interior</h4>
-    <p>El interior del NORD es tan espectacular como su exterior. También obra de Nuvolari-Lenard, fusiona materiales nobles y tecnologías avanzadas con un gusto refinado por el detalle.</p>
-  
-  <div class="carousel">
-  <a href="nord_1.webp" data-lightbox="nord-interior">
-    <img src="nord_1.webp" alt="Interior 1">
-  </a>
-  <a href="nord_2.webp" data-lightbox="nord-interior">
-    <img src="nord_2.webp" alt="Interior 2">
-  </a>
-  <a href="nord_3.webp" data-lightbox="nord-interior">
-    <img src="nord_3.webp" alt="Interior 3">
-  </a>
-  <a href="nord_4.png" data-lightbox="nord-interior">
-    <img src="nord_4.png" alt="Interior 4">
-  </a>
-  <a href="nord_5.png" data-lightbox="nord-interior">
-    <img src="nord_5.png" alt="Interior 5">
-  </a>
-</div>
+  <section class="section" data-aos="fade-up">
+    <div class="features">
+      <div class="feature" data-aos="zoom-in">
+        <img src="icono-longitud.png" alt="Eslora">
+        <h3>142 m de eslora</h3>
+        <p>Diseño exterior por Nuvolari Lenard. Uno de los más largos jamás construidos.</p>
+      </div>
+      <div class="feature" data-aos="zoom-in">
+        <img src="icono-potencia.png" alt="Motor">
+        <h3>Velocidad 20+ nudos</h3>
+        <p>Gracias a dos motores MTU y casco de bajo arrastre.</p>
+      </div>
+      <div class="feature" data-aos="zoom-in">
+        <img src="icono-lujo.png" alt="Lujo">
+        <h3>Interior extravagante</h3>
+        <p>Sala de cine, gimnasio, hospital, spa, club submarino, sala de juegos.</p>
+      </div>
+      <div class="feature" data-aos="zoom-in">
+        <img src="icono-heli.png" alt="Helipuertos">
+        <h3>2 helipuertos + hangar</h3>
+        <p>Y sistema de defensa antimisiles (según reportes).</p>
+      </div>
+    </div>
+  </section>
 
-    
-    <p>El yate puede alojar hasta 36 invitados en cerca de 20 camarotes, incluyendo suites VIP y un camarote principal que ofrece vistas panorámicas y privacidad absoluta.</p>
-
-    <h3>✨ Características destacadas</h3>
-    <p>El NORD se distingue por su capacidad de integrar elementos de confort, ocio y funcionalidad como ningún otro yate de su clase. Su concepto modular de cubiertas permite desde helipuertos operativos hasta pistas deportivas o zonas de eventos. Su iluminación convierte al NORD en un espectáculo nocturno cuando amarra en los puertos más exclusivos.</p>
-
-    <h3>⚙ Tecnología y propulsión</h3>
-    <p>El NORD es un hito de ingeniería naval moderna. Combina motores diésel convencionales con tecnología híbrida, minimizando las vibraciones y el ruido a bordo. Este sistema híbrido permite un ahorro significativo de combustible, reduciendo el impacto ambiental.</p>
-    <img src="Azipod.png" alt="Sistema de propulsión Azipod" class="medium" />
-    <p style="text-align: center; font-weight: bold;">Sistema de propulsión Azipod</p>
-    <p>Entre sus avances destacan: sistema Azipod que permite maniobrabilidad excepcional, plataforma de control automatizado, sistemas de reducción de emisiones IMO Tier III, paneles de aislamiento acústico y red de fibra óptica interna. Dispone de sistema dinámico de posicionamiento que evita el anclaje en zonas ecológicas sensibles.</p>
-  </main>
+  <section class="section" data-aos="fade-up">
+    <h2>Galería del NORD</h2>
+    <div class="gallery">
+      <img src="nord-interior-1.jpg" alt="Salón interior">
+      <img src="nord-interior-2.jpg" alt="Cubierta spa">
+      <img src="nord-interior-3.jpg" alt="Helipuerto">
+      <img src="nord-interior-4.jpg" alt="Vista aérea">
+    </div>
+  </section>
 
   <footer id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: kikogdv@gmail.com</p>
-    <p>Teléfono: +34 644 966 512</p>
+    <h3>Contacto</h3>
+    <p>Email: kikogdv@gmail.com | Tel: +34 644 966 512</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">francisco-garcia-de-vinuesa-prieto</a></p>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
 </body>
 </html>
