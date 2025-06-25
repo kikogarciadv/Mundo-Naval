@@ -4,115 +4,106 @@
   <meta charset="UTF-8" />
   <title>Artículos - Mundo Naval</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="logo.png" />
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f8fb;
       margin: 0;
-      padding: 0;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1b2a;
+      color: white;
     }
     header {
       background-color: #001f3f;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-    }
-    header img {
-      height: 50px;
-    }
-    nav {
-      background-color: #003366;
-      padding: 1rem;
+      padding: 2rem;
       text-align: center;
     }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+    nav {
+      background-color: #031d44;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
     nav a {
-      color: white;
+      color: #ffffffcc;
       text-decoration: none;
-      margin: 0 20px;
       font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       transition: color 0.3s;
     }
     nav a:hover {
       color: #ffcc00;
     }
-    main {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    h2 {
-      text-align: center;
-      color: #001f3f;
-      margin-bottom: 2rem;
-    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
     }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+
+    .project {
+      position: relative;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s;
+      border-radius: 12px;
+      cursor: pointer;
     }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
+
+    .project img {
       width: 100%;
-      height: 160px;
+      height: 100%;
       object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
     }
-    .card-content {
+
+    .project:hover img {
+      transform: scale(1.1);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      width: 100%;
       padding: 1rem;
+      box-sizing: border-box;
+      transition: 0.3s ease;
     }
-    .card-content h3 {
-      margin: 0 0 0.5rem 0;
-      color: #003366;
-      font-size: 1.1rem;
-    }
-    .card-content p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-    .card-content a {
-      display: inline-block;
-      margin-top: 0.8rem;
-      background: #001f3f;
+
+    .overlay h2 {
+      margin: 0;
+      font-size: 1.2rem;
       color: #fff;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      text-decoration: none;
+    }
+
+    .overlay p {
+      margin: 0.5rem 0 0;
       font-size: 0.9rem;
+      color: #ccc;
     }
-    .card-content a:hover {
-      background: #004080;
-    }
+
     footer {
       background-color: #001f3f;
-      color: white;
+      color: #fff;
       text-align: center;
       padding: 2rem 1rem;
-      margin-top: 3rem;
     }
+
     footer a {
       color: #ffcc00;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png" alt="Logo Mundo Naval">
-    <h1>Mundo Naval</h1>
+    <h1>Artículos de Ingeniería Naval</h1>
   </header>
 
   <nav>
@@ -122,64 +113,55 @@
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <main>
-    <h2>Artículos de Ingeniería Naval</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="08516645-10cd-4d75-b5d1-0d3f43b9ef55.png" alt="Simulación CFD">
-        <div class="card-content">
-          <h3>CFD en Ingeniería Naval</h3>
-          <p>Cómo la simulación digital ha transformado el diseño y análisis hidrodinámico de los buques modernos.</p>
-          <a href="cfd.html">Leer más</a>
-        </div>
+  <section class="grid">
+    <div class="project" onclick="location.href='cfd.html'">
+      <img src="08516645-10cd-4d75-b5d1-0d3f43b9ef55.png" alt="CFD">
+      <div class="overlay">
+        <h2>CFD en Ingeniería Naval</h2>
+        <p>Simulación hidrodinámica avanzada</p>
       </div>
-
-      <div class="card">
-        <img src="china_construccion.png" alt="Construcción naval en China">
-        <div class="card-content">
-          <h3>¿Reaccionará Europa al auge asiático en cruceros?</h3>
-          <p>Cómo China está revolucionando el sector de los cruceros y los retos para los astilleros europeos.</p>
-          <a href="cruceros.html">Leer más</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="helice_5_palas.png" alt="Hélice de 5 palas">
-        <div class="card-content">
-          <h3>¿Por qué los barcos modernos usan hélices de 5 palas?</h3>
-          <p>Eficiencia, menor vibración y maniobrabilidad en la propulsión naval actual.</p>
-          <a href="helices.html">Leer más</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="bulbo_efecto_ondas.png" alt="Bulbo de proa">
-        <div class="card-content">
-          <h3>Bulbo de proa: función y ventajas</h3>
-          <p>Cómo el bulbo reduce la resistencia, mejora el consumo y optimiza la velocidad del buque.</p>
-          <a href="bulbo_proa.html">Leer más</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="rotor_flettner.png" alt="Rotor Flettner">
-        <div class="card-content">
-          <h3>Propulsión por rotores navales: rotor Flettner</h3>
-          <p>Descubre el efecto Magnus y cómo los rotores Flettner ayudan a reducir el consumo energético.</p>
-          <a href="rotor_flettner.html">Leer más</a>
-        </div>
-      </div>
-      <div class="card">
-  <img src="lastre.png" alt="Tanques de lastre" />
-  <div class="card-content">
-    <h3>Tanques de lastre en la estabilidad del buque</h3>
-    <p>Explora cómo el sistema de lastre contribuye a la estabilidad, seguridad y eficiencia operativa de los buques modernos.</p>
-    <a href="#">Leer más</a>
-  </div>
-</div>
-
     </div>
-  </main>
+
+    <div class="project" onclick="location.href='cruceros.html'">
+      <img src="china_construccion.png" alt="Construcción naval en China">
+      <div class="overlay">
+        <h2>¿Europa ante China?</h2>
+        <p>Retos globales en cruceros</p>
+      </div>
+    </div>
+
+    <div class="project" onclick="location.href='helices.html'">
+      <img src="helice_5_palas.png" alt="Hélice de 5 palas">
+      <div class="overlay">
+        <h2>Hélices de 5 palas</h2>
+        <p>Vibración, eficiencia y maniobrabilidad</p>
+      </div>
+    </div>
+
+    <div class="project" onclick="location.href='bulbo_proa.html'">
+      <img src="bulbo_efecto_ondas.png" alt="Bulbo de proa">
+      <div class="overlay">
+        <h2>Bulbo de proa</h2>
+        <p>Ventajas hidrodinámicas</p>
+      </div>
+    </div>
+
+    <div class="project" onclick="location.href='rotor_flettner.html'">
+      <img src="rotor_flettner.png" alt="Rotor Flettner">
+      <div class="overlay">
+        <h2>Rotor Flettner</h2>
+        <p>Propulsión eólica moderna</p>
+      </div>
+    </div>
+
+    <div class="project" onclick="location.href='lastre.html'">
+      <img src="lastre.png" alt="Tanques de lastre">
+      <div class="overlay">
+        <h2>Tanques de lastre</h2>
+        <p>Estabilidad y seguridad operativa</p>
+      </div>
+    </div>
+  </section>
 
   <footer id="contacto">
     <h2>Contacto</h2>
@@ -192,5 +174,6 @@
       </a>
     </p>
   </footer>
+
 </body>
 </html>
