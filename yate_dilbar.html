@@ -4,37 +4,90 @@
   <meta charset="UTF-8">
   <title>Yate Dilbar - Mundo Naval</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- AOS Library CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Georgia', serif;
       background-color: #ffffff;
       color: #222;
       line-height: 1.6;
     }
 
-  header.hero {
-  position: relative;
-  height: 95vh;
-  background: url('dilbar_nuevo.jpg') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-}
+    /* NAVBAR */
+    .main-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+    }
 
+    .nav-container {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      margin-left: 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffcc00;
+    }
+
+    /* HERO */
+    header.hero {
+      position: relative;
+      height: 100vh;
+      background: url('dilbar_nuevo.jpg') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
 
     header.hero::before {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.4);
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
+      padding: 2rem;
     }
 
     .hero-content h1 {
@@ -45,10 +98,11 @@
 
     .hero-content p {
       font-size: 1.2rem;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
     }
 
+    /* SECCIONES */
     .section {
       padding: 4rem 2rem;
       text-align: center;
@@ -56,7 +110,7 @@
 
     .section h2 {
       font-size: 2rem;
-      color: #222;
+      color: #001f3f;
       margin-bottom: 1rem;
     }
 
@@ -67,7 +121,7 @@
 
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 2rem;
       margin-top: 3rem;
     }
@@ -86,7 +140,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       padding: 0 2rem;
-      margin-bottom: 4rem;
+      margin-top: 2rem;
     }
 
     .gallery img {
@@ -106,10 +160,35 @@
       color: #ffcc00;
       text-decoration: none;
     }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- NAVBAR -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="logo">Mundo Naval</div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="menu_articulos.html">Artículos</a>
+        <a href="menu_yates.html">Yates</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
   <header class="hero">
     <div class="hero-content">
       <h1>Yate Dilbar</h1>
@@ -117,29 +196,31 @@
     </div>
   </header>
 
-  <section class="section">
+  <!-- DESCRIPCIÓN -->
+  <section class="section" data-aos="fade-up">
     <h2>Desde 2016, redefiniendo la navegación de lujo</h2>
     <p>El superyate Dilbar combina ingeniería de precisión alemana con diseño interior británico exclusivo, y se posiciona como una de las embarcaciones más grandes y lujosas jamás construidas.</p>
   </section>
 
-  <section class="section">
+  <!-- CARACTERÍSTICAS -->
+  <section class="section" data-aos="fade-up">
     <div class="features">
-      <div class="feature">
+      <div class="feature" data-aos="zoom-in">
         <img src="icono-longitud.png" alt="Eslora">
         <h3>156 m de eslora</h3>
         <p>Uno de los yates privados más grandes del mundo por volumen interior.</p>
       </div>
-      <div class="feature">
+      <div class="feature" data-aos="zoom-in">
         <img src="icono-potencia.png" alt="Potencia">
         <h3>40.000 HP</h3>
         <p>Generadores eléctricos de última generación para potencia silenciosa.</p>
       </div>
-      <div class="feature">
+      <div class="feature" data-aos="zoom-in">
         <img src="icono-lujo.png" alt="Lujo">
         <h3>Interior de 5 estrellas</h3>
         <p>Diseño Winch Design, con spa, cine, piscina y espacios wellness.</p>
       </div>
-      <div class="feature">
+      <div class="feature" data-aos="zoom-in">
         <img src="icono-heli.png" alt="Helipuertos">
         <h3>2 Helipuertos</h3>
         <p>Para operaciones privadas de alto nivel.</p>
@@ -147,7 +228,8 @@
     </div>
   </section>
 
-  <section class="section">
+  <!-- GALERÍA -->
+  <section class="section" data-aos="fade-up">
     <h2>Galería del Yate Dilbar</h2>
     <div class="gallery">
       <img src="Dilbar-interior-3.webp" alt="Interior 1">
@@ -157,12 +239,21 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer id="contacto">
     <h3>Contacto</h3>
     <p>Email: kikogdv@gmail.com | Tel: +34 644 966 512</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">francisco-garcia-de-vinuesa-prieto</a></p>
   </footer>
 
+  <!-- AOS Library JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
 </body>
 </html>
-
