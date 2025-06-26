@@ -5,102 +5,117 @@
   <title>Mundo Naval</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --azul-oscuro: #001f3f;
+      --azul-marino: #003366;
+      --azul-claro: #eaf2fb;
+      --amarillo: #ffcc00;
+      --blanco: #ffffff;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f0f4f8;
       margin: 0;
       padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--azul-claro);
       color: #1a1a1a;
     }
 
     header {
-      background-color: #001f3f;
-      color: white;
+      background: var(--azul-oscuro);
+      padding: 1.2rem 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem 2rem;
       gap: 1rem;
     }
 
     header img {
-      height: 50px;
+      height: 48px;
     }
 
     header h1 {
-      margin: 0;
+      color: white;
       font-size: 2rem;
-      font-weight: 700;
+      font-weight: 800;
+      margin: 0;
     }
 
     nav {
-      background-color: #003366;
+      background-color: var(--azul-marino);
+      display: flex;
+      justify-content: center;
       padding: 1rem 0;
-      text-align: center;
+      gap: 2rem;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1rem;
       font-weight: 600;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #ffcc00;
+      color: var(--amarillo);
     }
 
     main {
-      max-width: 1100px;
-      margin: 2.5rem auto;
-      padding: 0 1.5rem;
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .banner {
+    .card-grid {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 2rem;
-      margin-bottom: 2rem;
+      justify-content: center;
+      margin-bottom: 3rem;
     }
 
-    .banner a {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-radius: 12px;
+    .card {
+      background: var(--blanco);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 300px;
+      cursor: pointer;
     }
 
-    .banner a:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
     }
 
-    .banner img {
-      width: 280px;
-      height: auto;
+    .card img {
+      width: 100%;
       display: block;
     }
 
     .main-banner img {
       width: 100%;
+      max-width: 960px;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     footer {
-      background-color: #001f3f;
+      background-color: var(--azul-oscuro);
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
       margin-top: 4rem;
     }
 
     footer a {
-      color: #ffcc00;
+      color: var(--amarillo);
       text-decoration: none;
     }
 
@@ -109,9 +124,9 @@
     }
 
     @media (max-width: 768px) {
-      .banner img {
-        width: 90%;
-        max-width: 320px;
+      .card-grid {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -131,14 +146,15 @@
   </nav>
 
   <main>
-    <section class="banner">
-      <a href="menu_articulos.html" class="articulos-link">
+    <section class="card-grid">
+      <a href="menu_articulos.html" class="card">
         <img src="logo_articulos.png" alt="Artículos" />
       </a>
-      <a href="menu_yates.html" class="yates-link">
+      <a href="menu_yates.html" class="card">
         <img src="index_yates.png" alt="Todo sobre yates" />
       </a>
     </section>
+
     <div class="main-banner">
       <img src="banner_mundo_naval.png" alt="Portada Mundo Naval" />
     </div>
