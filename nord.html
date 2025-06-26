@@ -6,11 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
+    :root {
+      --azul-naval: #001f3f;
+      --texto-claro: #f0f4f8;
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Georgia', serif;
       background-color: #0a2239;
-      color: white;
+      color: var(--texto-claro);
       line-height: 1.6;
     }
 
@@ -81,6 +86,7 @@
       font-size: 3rem;
       letter-spacing: 2px;
       margin-bottom: 1rem;
+      color: var(--azul-naval);
     }
 
     .hero-content p {
@@ -98,7 +104,7 @@
 
     .section h2 {
       font-size: 2rem;
-      color: #ffcc00;
+      color: var(--azul-naval);
       margin-bottom: 1rem;
     }
 
@@ -126,14 +132,14 @@
     }
 
     .feature img {
-      width: 100px;
+      width: 240px;
       margin-bottom: 1rem;
     }
 
     .feature h3 {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
-      color: #fff;
+      color: var(--texto-claro);
     }
 
     .feature p {
@@ -175,7 +181,6 @@
       text-decoration: underline;
     }
 
-    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -199,6 +204,7 @@
 
     .modal-content h3 {
       margin-bottom: 1rem;
+      color: var(--azul-naval);
     }
 
     .modal-content p {
@@ -286,12 +292,12 @@
     <p>LinkedIn: <a href="https://www.linkedin.com/in/francisco-garcia-de-vinuesa-prieto-3614a7292" target="_blank">francisco-garcia-de-vinuesa-prieto</a></p>
   </footer>
 
-  <!-- MODALS -->
+  <!-- MODALES -->
   <div id="modal1" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal1')">&times;</span>
       <h3>142 metros de poder naval</h3>
-      <p>El NORD mide 142 metros, con líneas agresivas y proporciones dominantes. Su perfil oscuro lo hace inconfundible en cualquier puerto.</p>
+      <p>Diseño firme y alargado, una declaración de presencia en cualquier puerto del mundo.</p>
     </div>
   </div>
 
@@ -299,7 +305,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal2')">&times;</span>
       <h3>Velocidad y eficiencia</h3>
-      <p>Sus motores MTU y diseño de casco permiten alcanzar más de 20 nudos sin comprometer la comodidad o la autonomía transatlántica.</p>
+      <p>Equipado con motores MTU de última generación, alcanza más de 20 nudos con autonomía transoceánica.</p>
     </div>
   </div>
 
@@ -307,7 +313,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal3')">&times;</span>
       <h3>Lujo interior sin límites</h3>
-      <p>Incluye sala de cine, spa completo, hospital, gimnasio, club submarino y salas privadas de entretenimiento y reuniones.</p>
+      <p>Salas de entretenimiento, clínicas privadas, zonas wellness y suites decoradas a medida.</p>
     </div>
   </div>
 
@@ -315,7 +321,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal4')">&times;</span>
       <h3>Infraestructura aérea</h3>
-      <p>Cuenta con dos helipuertos operativos, hangar oculto y según algunos reportes, tecnología de defensa anti-drones y misiles.</p>
+      <p>Dos helipuertos plenamente funcionales, hangar cerrado y capacidad para operaciones autónomas.</p>
     </div>
   </div>
 
@@ -340,4 +346,3 @@
 
 </body>
 </html>
-
